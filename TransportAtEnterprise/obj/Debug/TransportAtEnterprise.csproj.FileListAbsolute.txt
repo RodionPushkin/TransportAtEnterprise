@@ -1,0 +1,16 @@
+C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\bin\Debug\TransportAtEnterprise.exe.config
+C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\bin\Debug\TransportAtEnterprise.exe
+C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\bin\Debug\TransportAtEnterprise.pdb
+C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\TransportAtEnterprise.csproj.AssemblyReference.cache
+C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\TransportAtEnterprise.csproj.SuggestedBindingRedirects.cache
+C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\Windows\MainWindow.g.cs
+C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\App.g.cs
+C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\TransportAtEnterprise_MarkupCompile.cache
+C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\TransportAtEnterprise_MarkupCompile.lref
+C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\Windows\MainWindow.baml
+C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\TransportAtEnterprise.g.resources
+C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\TransportAtEnterprise.Properties.Resources.resources
+C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\TransportAtEnterprise.csproj.GenerateResource.cache
+C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\TransportAtEnterprise.csproj.CoreCompileInputs.cache
+C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\TransportAtEnterprise.exe
+C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\TransportAtEnterprise.pdb
