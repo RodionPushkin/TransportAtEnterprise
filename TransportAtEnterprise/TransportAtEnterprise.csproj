@@ -55,6 +55,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Pages\Car\Car.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Driver\Driver.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Office\Office.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -62,6 +74,16 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\Navigate.cs" />
+    <Compile Include="Pages\Car\Car.xaml.cs">
+      <DependentUpon>Car.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Driver\Driver.xaml.cs">
+      <DependentUpon>Driver.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Office\Office.xaml.cs">
+      <DependentUpon>Office.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -90,13 +112,40 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Resource Include="Resources\NotoSans-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Classes\" />
-    <Folder Include="Pages\" />
+    <Resource Include="Resources\car-active.png" />
+    <Resource Include="Resources\car.png" />
+    <Resource Include="Resources\driver-active.png" />
+    <Resource Include="Resources\driver.png" />
+    <Resource Include="Resources\office-active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\truck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\office.png" />
+    <Resource Include="Resources\plus.png" />
+    <Resource Include="Resources\search.png" />
+    <Resource Include="Resources\x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\searchbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\modal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Windows\Car\" />
+    <Folder Include="Windows\Driver\" />
+    <Folder Include="Windows\Office\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -5,8 +5,49 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TransportAtEnterprise"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720px" Width="1280px" MinHeight="720px" MinWidth="1280px">
-    <Grid>
-        
+        Title="TransportAtEnterprise" Height="720px" Width="1280px" MinHeight="720px" MinWidth="1280px" WindowStartupLocation="CenterScreen" FontFamily="/TransportAtEnterprise;component/Resources/#Noto Sans" FontSize="16" Icon="/TransportAtEnterprise;component/Resources/truck.png" Background="{x:Null}">
+    <Grid Background="#FFF1F5FF">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="12px"></ColumnDefinition>
+            <ColumnDefinition Width="56px"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="72px"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="24px"></RowDefinition>
+            <RowDefinition Height="56px"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="header" FontWeight="Bold" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="25px" LineHeight="30px" Text="Заголовок"/>
+        <Image Margin="0 0 232px 0" HorizontalAlignment="Right" Height="24px" Width="24px" Grid.Column="2" Grid.Row="1" Source="/Resources/search.png" Panel.ZIndex="1"/>
+        <TextBox Cursor="Hand" Padding="56px 16px 16px 16px" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Width="272px" Height="56px" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource TextBoxStyle1}">
+            <TextBox.Background>
+                <ImageBrush ImageSource="/TransportAtEnterprise;component/Resources/searchbg.png"/>
+            </TextBox.Background>
+        </TextBox>
+        <WrapPanel Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Cursor="Hand" x:Name="driver" Height="56px" Width="56px" Click="Button_Click" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{DynamicResource ButtonStyle1}">
+                <Button.Background>
+                    <ImageBrush ImageSource="/TransportAtEnterprise;component/Resources/driver.png"/>
+                </Button.Background>
+
+            </Button>
+            <Button Cursor="Hand" x:Name="car" Height="56px" Width="56px" Click="Button_Click_1" BorderBrush="{x:Null}" Foreground="{x:Null}" Margin="0 24px 0 24px" Style="{DynamicResource ButtonStyle1}">
+                <Button.Background>
+                    <ImageBrush ImageSource="/TransportAtEnterprise;component/Resources/car.png"/>
+                </Button.Background>
+            </Button>
+            <Button Cursor="Hand" x:Name="office" Height="56px" Width="56px" Click="Button_Click_2" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{DynamicResource ButtonStyle1}">
+                <Button.Background>
+                    <ImageBrush ImageSource="/TransportAtEnterprise;component/Resources/office.png"/>
+                </Button.Background>
+            </Button>
+        </WrapPanel>
+        <Button Panel.ZIndex="1" Cursor="Hand" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 0 48px" Grid.Row="2" Grid.Column="2" x:Name="add" Height="56px" Width="56px" Click="add_Click" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{DynamicResource ButtonStyle1}">
+            <Button.Background>
+                <ImageBrush ImageSource="/TransportAtEnterprise;component/Resources/add.png"/>
+            </Button.Background>
+        </Button>
+        <Frame Grid.Row="2" Grid.Column="2" Padding="24px" NavigationUIVisibility="Hidden" x:Name="frame"></Frame>
     </Grid>
 </Window>

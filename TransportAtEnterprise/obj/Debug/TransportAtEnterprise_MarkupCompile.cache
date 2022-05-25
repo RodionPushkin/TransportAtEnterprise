@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\App.xaml
-12061826496
+4209385362
 
-5-842636754
+92118978089
 13-1310406943
-Windows\MainWindow.xaml;
+Pages\Car\Car.xaml;Pages\Driver\Driver.xaml;Pages\Office\Office.xaml;Windows\MainWindow.xaml;
 
 False
 

@@ -1,8 +1,6 @@
 C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\bin\Debug\TransportAtEnterprise.exe.config
 C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\bin\Debug\TransportAtEnterprise.exe
 C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\bin\Debug\TransportAtEnterprise.pdb
-C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\TransportAtEnterprise.csproj.AssemblyReference.cache
-C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\TransportAtEnterprise.csproj.SuggestedBindingRedirects.cache
 C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\Windows\MainWindow.g.cs
 C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\App.g.cs
 C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\TransportAtEnterprise_MarkupCompile.cache
@@ -14,3 +12,12 @@ C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\obj\Debu
 C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\TransportAtEnterprise.csproj.CoreCompileInputs.cache
 C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\TransportAtEnterprise.exe
 C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\TransportAtEnterprise.pdb
+C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\App.baml
+C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\Pages\Car\Car.g.cs
+C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\Pages\Driver\Driver.g.cs
+C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\Pages\Office\Office.g.cs
+C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\Pages\Car\Car.baml
+C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\Pages\Driver\Driver.baml
+C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\Pages\Office\Office.baml
+C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\TransportAtEnterprise.csproj.AssemblyReference.cache
+C:\Users\pushk\source\repos\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\TransportAtEnterprise.csproj.SuggestedBindingRedirects.cache
