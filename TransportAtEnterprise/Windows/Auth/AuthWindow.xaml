@@ -1,0 +1,35 @@
+﻿<Window x:Class="TransportAtEnterprise.Windows.Auth.AuthWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TransportAtEnterprise.Windows.Auth"
+        mc:Ignorable="d"
+        Title="Добавление автомобилей" Height="552px" Width="472px" MinHeight="552px" MinWidth="472px" WindowStartupLocation="CenterScreen" FontFamily="/TransportAtEnterprise;component/Resources/#Noto Sans" FontSize="16" Icon="/TransportAtEnterprise;component/Resources/truck.png" Background="#FFF1F5FF" WindowStyle="None">
+    <Grid>
+        <Button Click="Button_Click" Cursor="Hand" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{DynamicResource ButtonStyle1}" Width="24" Height="24" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,24,24,0">
+            <Button.Background>
+                <ImageBrush ImageSource="/Resources/x.png"/>
+            </Button.Background>
+        </Button>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Почта" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="0,0,0,16"/>
+            <TextBox Cursor="Hand" Padding="16px 16px 16px 16px" VerticalAlignment="Center" HorizontalAlignment="Center" Width="272px" Height="56px" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource TextBoxStyle1}">
+                <TextBox.Background>
+                    <ImageBrush ImageSource="/TransportAtEnterprise;component/Resources/searchbg.png"/>
+                </TextBox.Background>
+            </TextBox>
+            <TextBlock Text="Пароль" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="0,24,0,16"/>
+            <TextBox Cursor="Hand" Padding="16px 16px 16px 16px" VerticalAlignment="Center" HorizontalAlignment="Center" Width="272px" Height="56px" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource TextBoxStyle1}">
+                <TextBox.Background>
+                    <ImageBrush ImageSource="/TransportAtEnterprise;component/Resources/searchbg.png"/>
+                </TextBox.Background>
+            </TextBox>
+            <Button Margin="0 24px 0 0" Content="Войти" Cursor="Hand" VerticalAlignment="Center" HorizontalAlignment="Center" Width="272px" Height="56px" BorderBrush="{x:Null}" Foreground="#FFFFFF" Style="{DynamicResource ButtonStyle1}">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Resources/Button.png"/>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\projects\c#\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\
+C:\projects\csharp\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\
 TransportAtEnterprise
 none
 false
 DEBUG;TRACE
-C:\projects\c#\TransportAtEnterprise\TransportAtEnterprise\App.xaml
-7-176006400
+C:\projects\csharp\TransportAtEnterprise\TransportAtEnterprise\App.xaml
+8-418604175
 21742052109
-24340935583
-18-410926195
-Pages\Car\Car.xaml;Pages\Driver\Driver.xaml;Pages\Path\Path.xaml;Windows\Car\AddCarWindow.xaml;Windows\Driver\AddDriverWindow.xaml;Windows\MainWindow.xaml;Windows\Path\AddPathWindow.xaml;
+28909797818
+18-790112787
+Pages\Car\Car.xaml;Pages\Driver\Driver.xaml;Pages\Path\Path.xaml;Windows\Auth\AuthWindow.xaml;Windows\Car\AddCarWindow.xaml;Windows\Driver\AddDriverWindow.xaml;Windows\MainWindow.xaml;Windows\Path\AddPathWindow.xaml;
 
 False
 
