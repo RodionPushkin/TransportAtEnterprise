@@ -55,6 +55,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Windows\Car\AddCarWindow.xaml.cs">
+      <DependentUpon>AddCarWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Driver\AddDriverWindow.xaml.cs">
+      <DependentUpon>AddDriverWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Office\AddOfficeWindow.xaml.cs">
+      <DependentUpon>AddOfficeWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="Pages\Car\Car.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -67,6 +76,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\Car\AddCarWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Driver\AddDriverWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -75,6 +92,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Classes\Api.cs" />
+    <Compile Include="Classes\AppData.cs" />
     <Compile Include="Classes\Navigate.cs" />
     <Compile Include="Pages\Car\Car.xaml.cs">
       <DependentUpon>Car.xaml</DependentUpon>
@@ -89,6 +108,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Windows\Office\AddOfficeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -142,10 +165,6 @@
   <ItemGroup>
     <Resource Include="Resources\modal.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Windows\Car\" />
-    <Folder Include="Windows\Driver\" />
-    <Folder Include="Windows\Office\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
