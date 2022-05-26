@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TransportAtEnterprise.Windows.Car;
+using TransportAtEnterprise.Windows.Driver;
+using TransportAtEnterprise.Windows.Path;
 
 namespace TransportAtEnterprise
 {
@@ -58,7 +61,7 @@ namespace TransportAtEnterprise
                 Classes.Navigate.page = "car";
                 Classes.Navigate.MainFrame.NavigationService.Source = new Uri("/Pages/Car/Car.xaml", UriKind.Relative);
             }
-            else if(path == "office")
+            else if(path == "path")
             {
                 var driverbrush = new ImageBrush();
                 var carbrush = new ImageBrush();
@@ -69,9 +72,9 @@ namespace TransportAtEnterprise
                 driver.Background = driverbrush;
                 car.Background = carbrush;
                 office.Background = officebrush;
-                header.Text = "Предприятия";
-                Classes.Navigate.page = "office";
-                Classes.Navigate.MainFrame.NavigationService.Source = new Uri("/Pages/Office/Office.xaml", UriKind.Relative);
+                header.Text = "Направления";
+                Classes.Navigate.page = "path";
+                Classes.Navigate.MainFrame.NavigationService.Source = new Uri("/Pages/Path/Path.xaml", UriKind.Relative);
             }
         }
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -86,23 +89,25 @@ namespace TransportAtEnterprise
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            navigation("office");
+            navigation("path");
         }
 
         private void add_Click(object sender, RoutedEventArgs e)
         {
             if(Classes.Navigate.page == "driver")
             {
-                //showdialog заблокирует текущее
-                MessageBox.Show("add driver");
+                AddDriverWindow addDriverWindow = new AddDriverWindow();
+                addDriverWindow.ShowDialog();
             }
             else if (Classes.Navigate.page == "car")
             {
-                MessageBox.Show("add car");
+                AddCarWindow addCarWindow = new AddCarWindow();
+                addCarWindow.ShowDialog();
             }
-            else if (Classes.Navigate.page == "office")
+            else if (Classes.Navigate.page == "path")
             {
-                MessageBox.Show("add office");
+                AddPathWindow addPathWindow = new AddPathWindow();
+                addPathWindow.ShowDialog();
             }
         }
     }

@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TransportAtEnterprise.Windows.Office
+namespace TransportAtEnterprise.Pages.Path
 {
     /// <summary>
-    /// Логика взаимодействия для AddOfficeWindow.xaml
+    /// Логика взаимодействия для Path.xaml
     /// </summary>
-    public partial class AddOfficeWindow : Window
+    public partial class Path : Page
     {
-        public AddOfficeWindow()
+        public Path()
         {
             InitializeComponent();
         }

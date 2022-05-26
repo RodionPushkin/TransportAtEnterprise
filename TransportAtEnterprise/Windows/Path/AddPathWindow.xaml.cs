@@ -10,19 +10,22 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TransportAtEnterprise.Pages.Office
+namespace TransportAtEnterprise.Windows.Path
 {
     /// <summary>
-    /// Логика взаимодействия для Office.xaml
+    /// Логика взаимодействия для AddPathWindow.xaml
     /// </summary>
-    public partial class Office : Page
+    public partial class AddPathWindow : Window
     {
-        public Office()
+        public AddPathWindow()
         {
             InitializeComponent();
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

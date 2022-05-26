@@ -23,5 +23,10 @@ namespace TransportAtEnterprise.Windows.Driver
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TransportAtEnterprise"
         mc:Ignorable="d"
-        Title="TransportAtEnterprise" Height="720px" Width="1280px" MinHeight="720px" MinWidth="1280px" WindowStartupLocation="CenterScreen" FontFamily="/TransportAtEnterprise;component/Resources/#Noto Sans" FontSize="16" Icon="/TransportAtEnterprise;component/Resources/truck.png" Background="{x:Null}">
+        Title="TransportAtEnterprise" Height="720px" Width="1280px" MinHeight="720px" MinWidth="1280px" WindowStartupLocation="CenterScreen" FontFamily="/TransportAtEnterprise;component/Resources/#Noto Sans" FontSize="16" Icon="/TransportAtEnterprise;component/Resources/truck.png" Background="#FFF1F5FF">
     <Grid Background="#FFF1F5FF">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="12px"></ColumnDefinition>

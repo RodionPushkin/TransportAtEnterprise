@@ -55,14 +55,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Pages\Path\Path.xaml.cs">
+      <DependentUpon>Path.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Car\AddCarWindow.xaml.cs">
       <DependentUpon>AddCarWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\Driver\AddDriverWindow.xaml.cs">
       <DependentUpon>AddDriverWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\Office\AddOfficeWindow.xaml.cs">
-      <DependentUpon>AddOfficeWindow.xaml</DependentUpon>
+    <Compile Include="Windows\Path\AddPathWindow.xaml.cs">
+      <DependentUpon>AddPathWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="Pages\Car\Car.xaml">
       <SubType>Designer</SubType>
@@ -72,7 +75,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Office\Office.xaml">
+    <Page Include="Pages\Path\Path.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -101,14 +104,11 @@
     <Compile Include="Pages\Driver\Driver.xaml.cs">
       <DependentUpon>Driver.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Office\Office.xaml.cs">
-      <DependentUpon>Office.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Windows\Office\AddOfficeWindow.xaml">
+    <Page Include="Windows\Path\AddPathWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
