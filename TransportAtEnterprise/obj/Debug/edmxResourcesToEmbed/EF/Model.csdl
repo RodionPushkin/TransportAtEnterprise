@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TransportAtEnterpriseDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Car" EntityType="TransportAtEnterpriseDBModel.Car" />
+    <EntitySet Name="CarStatus" EntityType="TransportAtEnterpriseDBModel.CarStatus" />
+    <EntitySet Name="Driver" EntityType="TransportAtEnterpriseDBModel.Driver" />
+    <EntitySet Name="DriverCar" EntityType="TransportAtEnterpriseDBModel.DriverCar" />
+    <EntitySet Name="DriverStatus" EntityType="TransportAtEnterpriseDBModel.DriverStatus" />
+    <EntitySet Name="Path" EntityType="TransportAtEnterpriseDBModel.Path" />
+    <EntitySet Name="User" EntityType="TransportAtEnterpriseDBModel.User" />
+    <AssociationSet Name="FK__Car__IDStatus__31EC6D26" Association="TransportAtEnterpriseDBModel.FK__Car__IDStatus__31EC6D26">
+      <End Role="CarStatus" EntitySet="CarStatus" />
+      <End Role="Car" EntitySet="Car" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DriverCar__IDCar__3B75D760" Association="TransportAtEnterpriseDBModel.FK__DriverCar__IDCar__3B75D760">
+      <End Role="Car" EntitySet="Car" />
+      <End Role="DriverCar" EntitySet="DriverCar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Driver__IDStatus__36B12243" Association="TransportAtEnterpriseDBModel.FK__Driver__IDStatus__36B12243">
+      <End Role="DriverStatus" EntitySet="DriverStatus" />
+      <End Role="Driver" EntitySet="Driver" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DriverCar__IDDri__3A81B327" Association="TransportAtEnterpriseDBModel.FK__DriverCar__IDDri__3A81B327">
+      <End Role="Driver" EntitySet="Driver" />
+      <End Role="DriverCar" EntitySet="DriverCar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Path__IDDriver__3F466844" Association="TransportAtEnterpriseDBModel.FK__Path__IDDriver__3F466844">
+      <End Role="Driver" EntitySet="Driver" />
+      <End Role="Path" EntitySet="Path" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Car">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Model" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="DateOfRelease" Type="DateTime" Precision="0" />
+    <Property Name="Condition" Type="Int32" Nullable="false" />
+    <Property Name="IDStatus" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="CarStatus" Relationship="TransportAtEnterpriseDBModel.FK__Car__IDStatus__31EC6D26" FromRole="Car" ToRole="CarStatus" />
+    <NavigationProperty Name="DriverCar" Relationship="TransportAtEnterpriseDBModel.FK__DriverCar__IDCar__3B75D760" FromRole="Car" ToRole="DriverCar" />
+  </EntityType>
+  <EntityType Name="CarStatus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Car" Relationship="TransportAtEnterpriseDBModel.FK__Car__IDStatus__31EC6D26" FromRole="CarStatus" ToRole="Car" />
+  </EntityType>
+  <EntityType Name="Driver">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Patronymic" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Birthday" Type="DateTime" Precision="0" />
+    <Property Name="Salary" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="Phone" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="DriverLicenseEnd" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="IDDriverLicense" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IDStatus" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="DriverStatus" Relationship="TransportAtEnterpriseDBModel.FK__Driver__IDStatus__36B12243" FromRole="Driver" ToRole="DriverStatus" />
+    <NavigationProperty Name="DriverCar" Relationship="TransportAtEnterpriseDBModel.FK__DriverCar__IDDri__3A81B327" FromRole="Driver" ToRole="DriverCar" />
+    <NavigationProperty Name="Path" Relationship="TransportAtEnterpriseDBModel.FK__Path__IDDriver__3F466844" FromRole="Driver" ToRole="Path" />
+  </EntityType>
+  <EntityType Name="DriverCar">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDDriver" Type="Int32" Nullable="false" />
+    <Property Name="IDCar" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Car" Relationship="TransportAtEnterpriseDBModel.FK__DriverCar__IDCar__3B75D760" FromRole="DriverCar" ToRole="Car" />
+    <NavigationProperty Name="Driver" Relationship="TransportAtEnterpriseDBModel.FK__DriverCar__IDDri__3A81B327" FromRole="DriverCar" ToRole="Driver" />
+  </EntityType>
+  <EntityType Name="DriverStatus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Driver" Relationship="TransportAtEnterpriseDBModel.FK__Driver__IDStatus__36B12243" FromRole="DriverStatus" ToRole="Driver" />
+  </EntityType>
+  <EntityType Name="Path">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDDriver" Type="Int32" Nullable="false" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="DateTo" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Driver" Relationship="TransportAtEnterpriseDBModel.FK__Path__IDDriver__3F466844" FromRole="Path" ToRole="Driver" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="320" FixedLength="false" Unicode="true" />
+    <Property Name="Token" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK__Car__IDStatus__31EC6D26">
+    <End Type="TransportAtEnterpriseDBModel.CarStatus" Role="CarStatus" Multiplicity="1" />
+    <End Type="TransportAtEnterpriseDBModel.Car" Role="Car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CarStatus">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Car">
+        <PropertyRef Name="IDStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DriverCar__IDCar__3B75D760">
+    <End Type="TransportAtEnterpriseDBModel.Car" Role="Car" Multiplicity="1" />
+    <End Type="TransportAtEnterpriseDBModel.DriverCar" Role="DriverCar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Car">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DriverCar">
+        <PropertyRef Name="IDCar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Driver__IDStatus__36B12243">
+    <End Type="TransportAtEnterpriseDBModel.DriverStatus" Role="DriverStatus" Multiplicity="1" />
+    <End Type="TransportAtEnterpriseDBModel.Driver" Role="Driver" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DriverStatus">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Driver">
+        <PropertyRef Name="IDStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DriverCar__IDDri__3A81B327">
+    <End Type="TransportAtEnterpriseDBModel.Driver" Role="Driver" Multiplicity="1" />
+    <End Type="TransportAtEnterpriseDBModel.DriverCar" Role="DriverCar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Driver">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DriverCar">
+        <PropertyRef Name="IDDriver" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Path__IDDriver__3F466844">
+    <End Type="TransportAtEnterpriseDBModel.Driver" Role="Driver" Multiplicity="1" />
+    <End Type="TransportAtEnterpriseDBModel.Path" Role="Path" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Driver">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Path">
+        <PropertyRef Name="IDDriver" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

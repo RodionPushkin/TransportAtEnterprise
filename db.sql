@@ -44,6 +44,7 @@ CREATE TABLE [Car] (
 	[DateOfRelease] DATE,
 	[Condition] INT NOT NULL DEFAULT 0,
 	[IDStatus] INT NOT NULL DEFAULT 1 REFERENCES [CarStatus] ([ID]),
+	[IsDeleted] BIT NOT NULL DEFAULT 0,
 )
 INSERT INTO [Car] ([Title],[Model],[DateOfRelease],[Condition],[IDStatus]) VALUES
 ('Автомобиль 1','Модель 1','2000.12.01',10,2),
@@ -76,6 +77,7 @@ CREATE TABLE [Driver] (
 	[DriverLicenseEnd] DATE NOT NULL,
 	[IDDriverLicense] NVARCHAR(100) NOT NULL,
 	[IDStatus] INT NOT NULL DEFAULT 1 REFERENCES [DriverStatus] ([ID]),
+	[IsDeleted] BIT NOT NULL DEFAULT 0,
 )
 INSERT INTO [Driver] ([FirstName],[LastName],[Patronymic],[Birthday],[Salary],[Phone],[DriverLicenseEnd],[IDDriverLicense],[IDStatus]) VALUES 
 ('Ксения','Корнилова',NULL,'2000.12.01',1000,'89295608601','2024.12.12','10010001',1),
@@ -101,6 +103,7 @@ CREATE TABLE [DriverCar] (
 	[ID] INT NOT NULL identity(1,1) PRIMARY KEY,
 	[IDDriver] INT NOT NULL REFERENCES [Driver] ([ID]),
 	[IDCar] INT NOT NULL REFERENCES [Car] ([ID]),
+	[IsDeleted] BIT NOT NULL DEFAULT 0,
 )
 
 -- [Path]
@@ -111,6 +114,7 @@ CREATE TABLE [Path] (
 	[IDDriver] INT NOT NULL REFERENCES [Driver] ([ID]),
 	[Address] NVARCHAR(1000) NOT NULL,
 	[DateTo] DATETIME NOT NULL,
+	[IsDeleted] BIT NOT NULL DEFAULT 0,
 )
 
 SELECT * FROM [User] ORDER BY [ID]

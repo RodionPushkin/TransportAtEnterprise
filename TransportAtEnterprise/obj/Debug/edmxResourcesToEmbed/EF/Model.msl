@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище TransportAtEnterpriseDBModelContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="Car">
+      <EntityTypeMapping TypeName="TransportAtEnterpriseDBModel.Car">
+        <MappingFragment StoreEntitySet="Car">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IDStatus" ColumnName="IDStatus" />
+          <ScalarProperty Name="Condition" ColumnName="Condition" />
+          <ScalarProperty Name="DateOfRelease" ColumnName="DateOfRelease" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CarStatus">
+      <EntityTypeMapping TypeName="TransportAtEnterpriseDBModel.CarStatus">
+        <MappingFragment StoreEntitySet="CarStatus">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Driver">
+      <EntityTypeMapping TypeName="TransportAtEnterpriseDBModel.Driver">
+        <MappingFragment StoreEntitySet="Driver">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IDStatus" ColumnName="IDStatus" />
+          <ScalarProperty Name="IDDriverLicense" ColumnName="IDDriverLicense" />
+          <ScalarProperty Name="DriverLicenseEnd" ColumnName="DriverLicenseEnd" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DriverCar">
+      <EntityTypeMapping TypeName="TransportAtEnterpriseDBModel.DriverCar">
+        <MappingFragment StoreEntitySet="DriverCar">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IDCar" ColumnName="IDCar" />
+          <ScalarProperty Name="IDDriver" ColumnName="IDDriver" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DriverStatus">
+      <EntityTypeMapping TypeName="TransportAtEnterpriseDBModel.DriverStatus">
+        <MappingFragment StoreEntitySet="DriverStatus">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Path">
+      <EntityTypeMapping TypeName="TransportAtEnterpriseDBModel.Path">
+        <MappingFragment StoreEntitySet="Path">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DateTo" ColumnName="DateTo" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="IDDriver" ColumnName="IDDriver" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="TransportAtEnterpriseDBModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Token" ColumnName="Token" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

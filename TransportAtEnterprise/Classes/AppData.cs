@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace TransportAtEnterprise.Classes
 {
-    internal class AppData
+    class AppData
     {
+        public static EF.Entities Context { get; } = new EF.Entities();
     }
 }

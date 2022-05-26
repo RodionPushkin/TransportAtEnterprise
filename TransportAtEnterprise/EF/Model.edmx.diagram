@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="58fb8754e6df47a19a9ab1244c1e6d7e" Name="Diagram1">
+        <EntityTypeShape EntityType="TransportAtEnterpriseDBModel.Car" Width="1.5" PointX="3" PointY="7.25" />
+        <EntityTypeShape EntityType="TransportAtEnterpriseDBModel.CarStatus" Width="1.5" PointX="0.75" PointY="7.875" />
+        <EntityTypeShape EntityType="TransportAtEnterpriseDBModel.Driver" Width="1.5" PointX="3" PointY="1.75" />
+        <EntityTypeShape EntityType="TransportAtEnterpriseDBModel.DriverCar" Width="1.5" PointX="5.25" PointY="2.5" />
+        <EntityTypeShape EntityType="TransportAtEnterpriseDBModel.DriverStatus" Width="1.5" PointX="0.75" PointY="2.875" />
+        <EntityTypeShape EntityType="TransportAtEnterpriseDBModel.Path" Width="1.5" PointX="5.25" PointY="5.5" />
+        <EntityTypeShape EntityType="TransportAtEnterpriseDBModel.User" Width="1.5" PointX="7.75" PointY="0.75" />
+        <AssociationConnector Association="TransportAtEnterpriseDBModel.FK__Car__IDStatus__31EC6D26" />
+        <AssociationConnector Association="TransportAtEnterpriseDBModel.FK__DriverCar__IDCar__3B75D760" />
+        <AssociationConnector Association="TransportAtEnterpriseDBModel.FK__Driver__IDStatus__36B12243" />
+        <AssociationConnector Association="TransportAtEnterpriseDBModel.FK__DriverCar__IDDri__3A81B327" />
+        <AssociationConnector Association="TransportAtEnterpriseDBModel.FK__Path__IDDriver__3F466844" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

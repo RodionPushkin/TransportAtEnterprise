@@ -44,8 +44,6 @@ C:\projects\csharp\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\Transpo
 C:\projects\csharp\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\TransportAtEnterprise.csproj.CoreCompileInputs.cache
 C:\projects\csharp\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\TransportAtEnterprise.exe
 C:\projects\csharp\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\TransportAtEnterprise.pdb
-C:\projects\c#\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\TransportAtEnterprise.csproj.AssemblyReference.cache
-C:\projects\c#\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\TransportAtEnterprise.csproj.SuggestedBindingRedirects.cache
 C:\projects\c#\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\Pages\Car\Car.g.cs
 C:\projects\c#\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\Pages\Driver\Driver.g.cs
 C:\projects\c#\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\Pages\Path\Path.g.cs
@@ -73,3 +71,12 @@ C:\projects\c#\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\TransportAt
 C:\projects\c#\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\TransportAtEnterprise.Properties.Resources.resources
 C:\projects\c#\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\TransportAtEnterprise.csproj.GenerateResource.cache
 C:\projects\c#\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\TransportAtEnterprise.csproj.CoreCompileInputs.cache
+C:\projects\c#\TransportAtEnterprise\TransportAtEnterprise\bin\Debug\EntityFramework.dll
+C:\projects\c#\TransportAtEnterprise\TransportAtEnterprise\bin\Debug\EntityFramework.SqlServer.dll
+C:\projects\c#\TransportAtEnterprise\TransportAtEnterprise\bin\Debug\EntityFramework.xml
+C:\projects\c#\TransportAtEnterprise\TransportAtEnterprise\bin\Debug\EntityFramework.SqlServer.xml
+C:\projects\c#\TransportAtEnterprise\TransportAtEnterprise\bin\Debug\ru\EntityFramework.resources.dll
+C:\projects\c#\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\TransportAtEnterprise.csproj.AssemblyReference.cache
+C:\projects\c#\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\TransportAtEnterprise.csproj.SuggestedBindingRedirects.cache
+C:\projects\c#\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\TransportAtEnterprise_Content.g.cs
+C:\projects\c#\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\TransportAtEnterprise.csproj.CopyComplete
