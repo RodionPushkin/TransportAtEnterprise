@@ -95,3 +95,5 @@ C:\projects\csharp\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\Windows
 C:\projects\csharp\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\TransportAtEnterprise.csproj.CopyComplete
 C:\projects\csharp\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\Windows\Auth\AuthWindow.g.cs
 C:\projects\csharp\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\Windows\Auth\AuthWindow.baml
+C:\projects\c#\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\Windows\Auth\AuthWindow.g.cs
+C:\projects\c#\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\Windows\Auth\AuthWindow.baml

@@ -27,5 +27,30 @@ namespace TransportAtEnterprise.Windows.Auth
         {
             this.Close();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if (tbemail.Text.Length == 0)
+            {
+                MessageBox.Show("Почта не может быть пустой");
+                return;
+            }
+
+            if (tbpass.Password.Length == 0)
+            {
+                MessageBox.Show("Пароль не может быть пустым");
+                return;
+            }
+            if (Classes.Api.Auth(tbemail.Text.ToString(), tbpass.Password.ToString()))
+            {
+                MainWindow win = new MainWindow();
+                this.Close();
+                win.Show();
+            }
+            else
+            {
+                MessageBox.Show("Неверная почта или пароль");
+            }
+        }
     }
 }
