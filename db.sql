@@ -14,7 +14,7 @@ CREATE TABLE [User] (
 	[Email] NVARCHAR(320) NOT NULL UNIQUE,
 	[Token] NVARCHAR(32) NOT NULL UNIQUE,
 )
-INSERT INTO [User] ([Email],[Token]) VALUES ('1','c4ca4238a0b923820dcc509a6f75849b')
+INSERT INTO [User] ([Email],[Token]) VALUES ('1','ec6c5bca94e93b963b3d18a57ca5cf62')
 
 -- [CarStatus]
 DROP TABLE IF EXISTS [CarStatus]

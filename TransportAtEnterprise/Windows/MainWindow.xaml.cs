@@ -31,6 +31,11 @@ namespace TransportAtEnterprise
         }
         private void navigation(string path)
         {
+            if(path == Classes.Navigate.page)
+            {
+                return;
+            }
+            search.Text = "";
             if (path == "driver")
             {
                 var driverbrush = new ImageBrush();

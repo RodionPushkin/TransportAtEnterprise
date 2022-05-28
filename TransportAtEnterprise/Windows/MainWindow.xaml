@@ -20,7 +20,7 @@
         </Grid.RowDefinitions>
         <TextBlock x:Name="header" FontWeight="Bold" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="25px" LineHeight="30px" Text="Заголовок"/>
         <Image Margin="0 0 232px 0" HorizontalAlignment="Right" Height="24px" Width="24px" Grid.Column="2" Grid.Row="1" Source="/Resources/search.png" Panel.ZIndex="1"/>
-        <TextBox Cursor="Hand" Padding="56px 16px 16px 16px" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Width="272px" Height="56px" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource TextBoxStyle1}">
+        <TextBox x:Name="search" Cursor="Hand" Padding="56px 16px 16px 16px" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Width="272px" Height="56px" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource TextBoxStyle1}">
             <TextBox.Background>
                 <ImageBrush ImageSource="/TransportAtEnterprise;component/Resources/searchbg.png"/>
             </TextBox.Background>

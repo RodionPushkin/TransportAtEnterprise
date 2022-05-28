@@ -9,10 +9,11 @@
        <Grid>
         <Button Click="Button_Click" Cursor="Hand" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{DynamicResource ButtonStyle1}" Width="24" Height="24" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,24,24,0">
             <Button.Background>
-                <ImageBrush ImageSource="/Resources/x.png"/>
+                <ImageBrush ImageSource="/TransportAtEnterprise;component/Resources/x.png"/>
             </Button.Background>
         </Button>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Авторизация" FontWeight="ExtraBold" FontSize="20" Margin="0 0 0 40px"/>
             <TextBlock Text="Почта" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="0,0,0,16"/>
             <TextBox x:Name="tbemail" Cursor="Hand" Padding="16px 16px 16px 16px" VerticalAlignment="Center" HorizontalAlignment="Center" Width="272px" Height="56px" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource TextBoxStyle1}">
                 <TextBox.Background>
@@ -27,9 +28,9 @@
             </PasswordBox>
             <Button Margin="0 24px 0 0" Content="Войти" Cursor="Hand" VerticalAlignment="Center" HorizontalAlignment="Center" Width="272px" Height="56px" BorderBrush="{x:Null}" Foreground="#FFFFFF" Style="{DynamicResource ButtonStyle1}" Click="Button_Click_1">
                 <Button.Background>
-                    <ImageBrush ImageSource="/Resources/Button.png"/>
+                    <ImageBrush ImageSource="/TransportAtEnterprise;component/Resources/Button.png"/>
                 </Button.Background>
             </Button>
         </StackPanel>
-    </Grid>
+       </Grid>
 </Window>
