@@ -32,13 +32,13 @@ namespace TransportAtEnterprise.Windows.Auth
         {
             if (tbemail.Text.Length == 0)
             {
-                MessageBox.Show("Почта не может быть пустой");
+                MessageBox.Show("Почта не может быть пустой", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
             if (tbpass.Password.Length == 0)
             {
-                MessageBox.Show("Пароль не может быть пустым");
+                MessageBox.Show("Пароль не может быть пустым", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
             if (Classes.Api.Auth(tbemail.Text.ToString(), tbpass.Password.ToString()))
@@ -49,7 +49,7 @@ namespace TransportAtEnterprise.Windows.Auth
             }
             else
             {
-                MessageBox.Show("Неверная почта или пароль");
+                MessageBox.Show("Неверная почта или пароль", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }
