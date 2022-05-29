@@ -300,31 +300,31 @@
             <StackPanel Orientation="Horizontal">
                 <StackPanel VerticalAlignment="Bottom" Margin="0 0 48px 0">
                     <TextBlock Text="Имя" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="0,0,0,16"/>
-                    <TextBox x:Name="tbFirstName" Cursor="Hand" Padding="16px 16px 16px 16px" VerticalAlignment="Center" HorizontalAlignment="Center" Width="272px" Height="56px" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource TextBoxStyle1}">
+                    <TextBox TextChanged="tbFirstName_TextChanged" x:Name="tbFirstName" Cursor="Hand" Padding="16px 16px 16px 16px" VerticalAlignment="Center" HorizontalAlignment="Center" Width="272px" Height="56px" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource TextBoxStyle1}">
                         <TextBox.Background>
                             <ImageBrush ImageSource="/TransportAtEnterprise;component/Resources/searchbg.png"/>
                         </TextBox.Background>
                     </TextBox>
                     <TextBlock Text="Фамилия" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="0,24,0,16"/>
-                    <TextBox x:Name="tbLastName" Cursor="Hand" Padding="16px 16px 16px 16px" VerticalAlignment="Center" HorizontalAlignment="Center" Width="272px" Height="56px" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource TextBoxStyle1}">
+                    <TextBox x:Name="tbLastName" Cursor="Hand" Padding="16px 16px 16px 16px" VerticalAlignment="Center" HorizontalAlignment="Center" Width="272px" Height="56px" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource TextBoxStyle1}" TextChanged="tbLastName_TextChanged">
                         <TextBox.Background>
                             <ImageBrush ImageSource="/TransportAtEnterprise;component/Resources/searchbg.png"/>
                         </TextBox.Background>
                     </TextBox>
                     <TextBlock Text="Отчество" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="0,24,0,16"/>
-                    <TextBox x:Name="tbParonymic" Cursor="Hand" Padding="16px 16px 16px 16px" VerticalAlignment="Center" HorizontalAlignment="Center" Width="272px" Height="56px" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource TextBoxStyle1}">
+                    <TextBox x:Name="tbParonymic" Cursor="Hand" Padding="16px 16px 16px 16px" VerticalAlignment="Center" HorizontalAlignment="Center" Width="272px" Height="56px" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource TextBoxStyle1}" TextChanged="tbParonymic_TextChanged">
                         <TextBox.Background>
                             <ImageBrush ImageSource="/TransportAtEnterprise;component/Resources/searchbg.png"/>
                         </TextBox.Background>
                     </TextBox>
                     <TextBlock Text="Зарплата" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="0,24,0,16"/>
-                    <TextBox x:Name="tbSalary" Cursor="Hand" Padding="16px 16px 16px 16px" VerticalAlignment="Center" HorizontalAlignment="Center" Width="272px" Height="56px" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource TextBoxStyle1}">
+                    <TextBox x:Name="tbSalary" Cursor="Hand" Padding="16px 16px 16px 16px" VerticalAlignment="Center" HorizontalAlignment="Center" Width="272px" Height="56px" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource TextBoxStyle1}" TextChanged="tbSalary_TextChanged" MaxLength="10">
                         <TextBox.Background>
                             <ImageBrush ImageSource="/TransportAtEnterprise;component/Resources/searchbg.png"/>
                         </TextBox.Background>
                     </TextBox>
                     <TextBlock Text="Телефон" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="0,24,0,16"/>
-                    <TextBox x:Name="tbPhone" Cursor="Hand" Padding="16px 16px 16px 16px" VerticalAlignment="Center" HorizontalAlignment="Center" Width="272px" Height="56px" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource TextBoxStyle1}">
+                    <TextBox x:Name="tbPhone" Cursor="Hand" Padding="16px 16px 16px 16px" VerticalAlignment="Center" HorizontalAlignment="Center" Width="272px" Height="56px" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource TextBoxStyle1}" KeyUp="tbPhone_KeyUp" MaxLength="17">
                         <TextBox.Background>
                             <ImageBrush ImageSource="/TransportAtEnterprise;component/Resources/searchbg.png"/>
                         </TextBox.Background>
@@ -344,7 +344,7 @@
                         </DatePicker.Background>
                     </DatePicker>
                     <TextBlock Text="Номер водительских прав" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="0,24,0,16"/>
-                    <TextBox x:Name="tbIDDriver" Cursor="Hand" Padding="16px 16px 16px 16px" VerticalAlignment="Center" HorizontalAlignment="Center" Width="272px" Height="56px" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource TextBoxStyle1}">
+                    <TextBox x:Name="tbIDDriver" Cursor="Hand" Padding="16px 16px 16px 16px" VerticalAlignment="Center" HorizontalAlignment="Center" Width="272px" Height="56px" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource TextBoxStyle1}" TextChanged="tbIDDriver_TextChanged">
                         <TextBox.Background>
                             <ImageBrush ImageSource="/TransportAtEnterprise;component/Resources/searchbg.png"/>
                         </TextBox.Background>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,12 +20,6 @@ namespace TransportAtEnterprise.Windows.Driver
     /// </summary>
     public partial class AddDriverWindow : Window
     {
-        public string phone = "";
-        public string idDriver = "";
-        public string FirstName = "";
-        public string LastName = "";
-        public string Patrinymic = "";
-        public decimal Salary = 0;
         public AddDriverWindow()
         {
             InitializeComponent();
@@ -32,7 +27,14 @@ namespace TransportAtEnterprise.Windows.Driver
             cbStatus.DisplayMemberPath = "Title";
             cbStatus.SelectedIndex = 0;
         }
-
+        private string GetLetters(string text)
+        {
+            return new String(text.ToCharArray().Where(n => !char.IsDigit(n) && char.IsLetter(n)).ToArray());
+        }
+        private string GetNumbers(string text)
+        {
+            return new String(text.ToCharArray().Where(n => char.IsDigit(n) && !char.IsLetter(n)).ToArray());
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
@@ -89,6 +91,112 @@ namespace TransportAtEnterprise.Windows.Driver
                 MessageBox.Show("Ой ой что-то пошло не так", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
+        }
+
+        private void tbFirstName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            tbFirstName.Text = GetLetters(tbFirstName.Text);
+            tbFirstName.SelectionStart = tbFirstName.Text.Length;
+        }
+
+        private void tbLastName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            tbLastName.Text = GetLetters(tbLastName.Text);
+            tbLastName.SelectionStart = tbLastName.Text.Length;
+        }
+
+        private void tbParonymic_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            tbParonymic.Text = GetLetters(tbParonymic.Text);
+            tbParonymic.SelectionStart = tbParonymic.Text.Length;
+        }
+
+        private void tbIDDriver_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            tbIDDriver.Text = GetNumbers(tbIDDriver.Text);
+            tbIDDriver.SelectionStart = tbIDDriver.Text.Length;
+        }
+
+        private void tbSalary_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            //Regex rg = new Regex(@"/\B(?=(\d{3})+(?!\d))/g");
+            if(GetNumbers(tbSalary.Text).Length == 0)
+            {
+                return;
+            }
+            tbSalary.Text = Convert.ToInt32(GetNumbers(tbSalary.Text)).ToString("N0");
+            tbSalary.SelectionStart = tbSalary.Text.Length;
+        }
+
+        private void tbPhone_KeyUp(object sender, KeyEventArgs e)
+        {
+            string phone = GetNumbers(tbPhone.Text);
+            string formatedPhone = "";
+            if (phone.Length == 0 || e.Key == Key.Back && phone.Length >= 1)
+            {
+                return;
+            }
+            if (phone[0] == '7' || phone[0] == '8' || phone[0] == '9')
+            {
+                if (phone[0] == '9')
+                {
+                    formatedPhone = $"+7 ({phone[0]}";
+                }
+                if (phone[0] == '8')
+                {
+                    formatedPhone = $"{phone[0]} (";
+                }
+                if (phone[0] == '7')
+                {
+                    formatedPhone = $"+{ phone[0]} (";
+                }
+                if (phone.Length >= 2)
+                {
+                    formatedPhone += phone[1].ToString();
+                }
+                if (phone.Length >= 3)
+                {
+                    formatedPhone += phone[2].ToString();
+                }
+                if (phone.Length >= 4)
+                {
+                    formatedPhone += $"{phone[3]})";
+                }
+                if (phone.Length >= 5)
+                {
+                    formatedPhone += phone[4].ToString();
+                }
+                if (phone.Length >= 6)
+                {
+                    formatedPhone += phone[5].ToString();
+                }
+                if (phone.Length >= 7)
+                {
+                    formatedPhone += $"{phone[6]}-";
+                }
+                if (phone.Length >= 8)
+                {
+                    formatedPhone += phone[7].ToString();
+                }
+                if (phone.Length >= 9)
+                {
+                    formatedPhone += $"{phone[8]}-";
+                }
+                if (phone.Length >= 10)
+                {
+                    formatedPhone += phone[9].ToString();
+                }
+                if (phone.Length >= 11)
+                {
+                    formatedPhone += phone[10].ToString();
+                }
+            }
+            else
+            {
+                formatedPhone = $"+{phone}";
+            }
+            tbPhone.Text = formatedPhone;
+            tbPhone.SelectionStart = tbPhone.Text.Length;
         }
     }
 }
