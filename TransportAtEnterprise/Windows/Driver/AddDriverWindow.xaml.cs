@@ -146,7 +146,7 @@ namespace TransportAtEnterprise.Windows.Driver
                 }
                 if (phone.Length >= 4)
                 {
-                    formatedPhone += $"{phone[3]})";
+                    formatedPhone += $"{phone[3]}) ";
                 }
                 if (phone.Length >= 5)
                 {
