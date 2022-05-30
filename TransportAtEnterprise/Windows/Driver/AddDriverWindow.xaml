@@ -324,7 +324,7 @@
                         </TextBox.Background>
                     </TextBox>
                     <TextBlock Text="Телефон" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="0,24,0,16"/>
-                    <TextBox x:Name="tbPhone" Cursor="Hand" Padding="16px 16px 16px 16px" VerticalAlignment="Center" HorizontalAlignment="Center" Width="272px" Height="56px" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource TextBoxStyle1}" KeyUp="tbPhone_KeyUp" MaxLength="17">
+                    <TextBox x:Name="tbPhone" Cursor="Hand" Padding="16px 16px 16px 16px" VerticalAlignment="Center" HorizontalAlignment="Center" Width="272px" Height="56px" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource TextBoxStyle1}" KeyUp="tbPhone_KeyUp" MaxLength="18">
                         <TextBox.Background>
                             <ImageBrush ImageSource="/TransportAtEnterprise;component/Resources/searchbg.png"/>
                         </TextBox.Background>

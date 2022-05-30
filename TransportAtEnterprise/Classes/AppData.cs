@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TransportAtEnterprise.Classes
 {
-    class AppData
+    public class AppData
     {
         public static EF.Entities Context { get; } = new EF.Entities();
         public static string GetLetters(string text)
