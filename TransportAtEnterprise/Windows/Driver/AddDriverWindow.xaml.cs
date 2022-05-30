@@ -23,17 +23,9 @@ namespace TransportAtEnterprise.Windows.Driver
         public AddDriverWindow()
         {
             InitializeComponent();
-            cbStatus.ItemsSource = Classes.AppData.Context.DriverStatus.OrderBy(i => i.ID).ToList();
+            cbStatus.ItemsSource = Classes.Api.ReadDriverStatus();
             cbStatus.DisplayMemberPath = "Title";
             cbStatus.SelectedIndex = 0;
-        }
-        private string GetLetters(string text)
-        {
-            return new String(text.ToCharArray().Where(n => !char.IsDigit(n) && char.IsLetter(n)).ToArray());
-        }
-        private string GetNumbers(string text)
-        {
-            return new String(text.ToCharArray().Where(n => char.IsDigit(n) && !char.IsLetter(n)).ToArray());
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -57,11 +49,6 @@ namespace TransportAtEnterprise.Windows.Driver
                 MessageBox.Show("Номер водительских прав не может быть пустым", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-            else if (tbParonymic.Text == "")
-            {
-                MessageBox.Show("Отчество не может быть пустым", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
             else if (tbPhone.Text == "")
             {
                 MessageBox.Show("Телефон не может быть пустым", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -79,7 +66,7 @@ namespace TransportAtEnterprise.Windows.Driver
             }
             else if (dpDateDriver.SelectedDate == null)
             {
-                MessageBox.Show("Дата выпуска прав не может быть пустой", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Дата окончания водительских прав не может быть пустой", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
             if (Classes.Api.CreateDriver(null))
@@ -95,42 +82,41 @@ namespace TransportAtEnterprise.Windows.Driver
 
         private void tbFirstName_TextChanged(object sender, TextChangedEventArgs e)
         {
-            tbFirstName.Text = GetLetters(tbFirstName.Text);
+            tbFirstName.Text = Classes.AppData.GetLetters(tbFirstName.Text);
             tbFirstName.SelectionStart = tbFirstName.Text.Length;
         }
 
         private void tbLastName_TextChanged(object sender, TextChangedEventArgs e)
         {
-            tbLastName.Text = GetLetters(tbLastName.Text);
+            tbLastName.Text = Classes.AppData.GetLetters(tbLastName.Text);
             tbLastName.SelectionStart = tbLastName.Text.Length;
         }
 
         private void tbParonymic_TextChanged(object sender, TextChangedEventArgs e)
         {
-            tbParonymic.Text = GetLetters(tbParonymic.Text);
+            tbParonymic.Text = Classes.AppData.GetLetters(tbParonymic.Text);
             tbParonymic.SelectionStart = tbParonymic.Text.Length;
         }
 
         private void tbIDDriver_TextChanged(object sender, TextChangedEventArgs e)
         {
-            tbIDDriver.Text = GetNumbers(tbIDDriver.Text);
+            tbIDDriver.Text = Classes.AppData.GetNumbers(tbIDDriver.Text);
             tbIDDriver.SelectionStart = tbIDDriver.Text.Length;
         }
 
         private void tbSalary_TextChanged(object sender, TextChangedEventArgs e)
         {
-            //Regex rg = new Regex(@"/\B(?=(\d{3})+(?!\d))/g");
-            if(GetNumbers(tbSalary.Text).Length == 0)
+            if(Classes.AppData.GetNumbers(tbSalary.Text).Length == 0)
             {
                 return;
             }
-            tbSalary.Text = Convert.ToInt32(GetNumbers(tbSalary.Text)).ToString("N0");
+            tbSalary.Text = Convert.ToInt32(Classes.AppData.GetNumbers(tbSalary.Text)).ToString("N0");
             tbSalary.SelectionStart = tbSalary.Text.Length;
         }
 
         private void tbPhone_KeyUp(object sender, KeyEventArgs e)
         {
-            string phone = GetNumbers(tbPhone.Text);
+            string phone = Classes.AppData.GetNumbers(tbPhone.Text);
             string formatedPhone = "";
             if (phone.Length == 0 || e.Key == Key.Back && phone.Length >= 1)
             {

@@ -129,5 +129,13 @@ namespace TransportAtEnterprise.Classes
         {
             return Classes.AppData.Context.Path.Where(i => i.Address.Contains(text)).OrderBy(i => i.ID).ToList();
         }
+        public static List<EF.CarStatus> ReadCarStatus()
+        {
+            return Classes.AppData.Context.CarStatus.OrderBy(i => i.ID).ToList();
+        }
+        public static List<EF.DriverStatus> ReadDriverStatus()
+        {
+            return Classes.AppData.Context.DriverStatus.OrderBy(i => i.ID).ToList();
+        }
     }
 }

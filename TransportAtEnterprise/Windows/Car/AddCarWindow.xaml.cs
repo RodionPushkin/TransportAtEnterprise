@@ -22,7 +22,7 @@ namespace TransportAtEnterprise.Windows.Car
         public AddCarWindow()
         {
             InitializeComponent();
-            cbStatus.ItemsSource = Classes.AppData.Context.CarStatus.OrderBy(i => i.ID).ToList();
+            cbStatus.ItemsSource = Classes.Api.ReadCarStatus();
             cbStatus.DisplayMemberPath = "Title";
             cbStatus.SelectedIndex = 0;
             cbScore.ItemsSource = new List<int>(){
