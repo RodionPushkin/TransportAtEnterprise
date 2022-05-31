@@ -106,11 +106,13 @@ namespace TransportAtEnterprise.Windows.Driver
 
         private void tbSalary_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if(Classes.AppData.GetNumbers(tbSalary.Text).Length == 0)
+            string text = Classes.AppData.GetNumbers(tbSalary.Text);
+            if (text.Length == 0)
             {
+                tbSalary.Text = text;
                 return;
             }
-            tbSalary.Text = Convert.ToInt32(Classes.AppData.GetNumbers(tbSalary.Text)).ToString("N0");
+            tbSalary.Text = Convert.ToInt32(text).ToString("N0");
             tbSalary.SelectionStart = tbSalary.Text.Length;
         }
 
@@ -182,7 +184,7 @@ namespace TransportAtEnterprise.Windows.Driver
                 formatedPhone = $"+{phone}";
             }
             tbPhone.Text = formatedPhone;
-            tbPhone.SelectionStart = tbPhone.Text.Length;
+            tbPhone.SelectionStart = formatedPhone.Length;
         }
     }
 }

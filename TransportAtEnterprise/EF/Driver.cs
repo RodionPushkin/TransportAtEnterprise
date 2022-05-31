@@ -25,8 +25,8 @@ namespace TransportAtEnterprise.EF
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Patronymic { get; set; }
-        public Nullable<System.DateTime> Birthday { get; set; }
-        public Nullable<decimal> Salary { get; set; }
+        public System.DateTime Birthday { get; set; }
+        public decimal Salary { get; set; }
         public string Phone { get; set; }
         public System.DateTime DriverLicenseEnd { get; set; }
         public string IDDriverLicense { get; set; }

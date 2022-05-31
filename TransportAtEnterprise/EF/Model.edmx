@@ -32,9 +32,9 @@
           <Property Name="FirstName" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="LastName" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Patronymic" Type="nvarchar" MaxLength="100" />
-          <Property Name="Birthday" Type="date" />
-          <Property Name="Salary" Type="decimal" Precision="10" Scale="2" />
-          <Property Name="Phone" Type="nchar" MaxLength="20" />
+          <Property Name="Birthday" Type="date" Nullable="false" />
+          <Property Name="Salary" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="Phone" Type="nchar" MaxLength="20" Nullable="false" />
           <Property Name="DriverLicenseEnd" Type="date" Nullable="false" />
           <Property Name="IDDriverLicense" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="IDStatus" Type="int" Nullable="false" />
@@ -226,9 +226,9 @@
           <Property Name="FirstName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="LastName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Patronymic" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Birthday" Type="DateTime" Precision="0" />
-          <Property Name="Salary" Type="Decimal" Precision="10" Scale="2" />
-          <Property Name="Phone" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="Birthday" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Salary" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+          <Property Name="Phone" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
           <Property Name="DriverLicenseEnd" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="IDDriverLicense" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="IDStatus" Type="Int32" Nullable="false" />
