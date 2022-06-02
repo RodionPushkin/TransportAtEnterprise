@@ -10,20 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TransportAtEnterprise.Pages.Driver
+namespace TransportAtEnterprise.Windows.Path
 {
     /// <summary>
-    /// Логика взаимодействия для Driver.xaml
+    /// Логика взаимодействия для UpdatePathWindow.xaml
     /// </summary>
-    public partial class Driver : Page
+    public partial class UpdatePathWindow : Window
     {
-        public Driver()
+        public UpdatePathWindow()
         {
             InitializeComponent();
-            lvDriver.ItemsSource = Classes.Api.ReadDriver();
         }
     }
 }

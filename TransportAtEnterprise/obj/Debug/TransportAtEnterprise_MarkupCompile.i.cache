@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\projects\csharp\TransportAtEnterprise\TransportAtEnterprise\App.xaml
-8-418604175
+11-546126837
 21742052109
-29-1172290800
+322059954378
 19-679394312
-Pages\Car\Car.xaml;Pages\Driver\Driver.xaml;Pages\Path\Path.xaml;Windows\Auth\AuthWindow.xaml;Windows\Car\AddCarWindow.xaml;Windows\Driver\AddDriverWindow.xaml;Windows\MainWindow.xaml;Windows\Path\AddPathWindow.xaml;
+Pages\Car\Car.xaml;Pages\Driver\Driver.xaml;Pages\Path\Path.xaml;Windows\Auth\AuthWindow.xaml;Windows\Car\AddCarWindow.xaml;Windows\Car\UpdateCarWindow.xaml;Windows\Driver\AddDriverWindow.xaml;Windows\Driver\UpdateDriverWindow.xaml;Windows\MainWindow.xaml;Windows\Path\AddPathWindow.xaml;Windows\Path\UpdatePathWindow.xaml;
 
 True
 

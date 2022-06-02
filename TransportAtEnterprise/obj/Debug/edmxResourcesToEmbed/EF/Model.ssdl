@@ -31,7 +31,7 @@
     <Property Name="Salary" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="Phone" Type="nchar" MaxLength="20" Nullable="false" />
     <Property Name="DriverLicenseEnd" Type="date" Nullable="false" />
-    <Property Name="IDDriverLicense" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="NumberDriverLicense" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="IDStatus" Type="int" Nullable="false" />
     <Property Name="IsDeleted" Type="bit" Nullable="false" />
   </EntityType>
@@ -69,7 +69,7 @@
     <Property Name="Email" Type="nvarchar" MaxLength="320" Nullable="false" />
     <Property Name="Token" Type="nvarchar" MaxLength="32" Nullable="false" />
   </EntityType>
-  <Association Name="FK__Car__IDStatus__31EC6D26">
+  <Association Name="FK__Car__IDStatus__300424B4">
     <End Role="CarStatus" Type="Self.CarStatus" Multiplicity="1" />
     <End Role="Car" Type="Self.Car" Multiplicity="*" />
     <ReferentialConstraint>
@@ -81,7 +81,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Driver__IDStatus__36B12243">
+  <Association Name="FK__Driver__IDStatus__34C8D9D1">
     <End Role="DriverStatus" Type="Self.DriverStatus" Multiplicity="1" />
     <End Role="Driver" Type="Self.Driver" Multiplicity="*" />
     <ReferentialConstraint>
@@ -93,7 +93,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__DriverCar__IDCar__3B75D760">
+  <Association Name="FK__DriverCar__IDCar__398D8EEE">
     <End Role="Car" Type="Self.Car" Multiplicity="1" />
     <End Role="DriverCar" Type="Self.DriverCar" Multiplicity="*" />
     <ReferentialConstraint>
@@ -105,7 +105,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__DriverCar__IDDri__3A81B327">
+  <Association Name="FK__DriverCar__IDDri__38996AB5">
     <End Role="Driver" Type="Self.Driver" Multiplicity="1" />
     <End Role="DriverCar" Type="Self.DriverCar" Multiplicity="*" />
     <ReferentialConstraint>
@@ -117,7 +117,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Path__IDDriver__3F466844">
+  <Association Name="FK__Path__IDDriver__3D5E1FD2">
     <End Role="Driver" Type="Self.Driver" Multiplicity="1" />
     <End Role="Path" Type="Self.Path" Multiplicity="*" />
     <ReferentialConstraint>
@@ -137,23 +137,23 @@
     <EntitySet Name="DriverStatus" EntityType="Self.DriverStatus" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Path" EntityType="Self.Path" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__Car__IDStatus__31EC6D26" Association="Self.FK__Car__IDStatus__31EC6D26">
+    <AssociationSet Name="FK__Car__IDStatus__300424B4" Association="Self.FK__Car__IDStatus__300424B4">
       <End Role="CarStatus" EntitySet="CarStatus" />
       <End Role="Car" EntitySet="Car" />
     </AssociationSet>
-    <AssociationSet Name="FK__Driver__IDStatus__36B12243" Association="Self.FK__Driver__IDStatus__36B12243">
+    <AssociationSet Name="FK__Driver__IDStatus__34C8D9D1" Association="Self.FK__Driver__IDStatus__34C8D9D1">
       <End Role="DriverStatus" EntitySet="DriverStatus" />
       <End Role="Driver" EntitySet="Driver" />
     </AssociationSet>
-    <AssociationSet Name="FK__DriverCar__IDCar__3B75D760" Association="Self.FK__DriverCar__IDCar__3B75D760">
+    <AssociationSet Name="FK__DriverCar__IDCar__398D8EEE" Association="Self.FK__DriverCar__IDCar__398D8EEE">
       <End Role="Car" EntitySet="Car" />
       <End Role="DriverCar" EntitySet="DriverCar" />
     </AssociationSet>
-    <AssociationSet Name="FK__DriverCar__IDDri__3A81B327" Association="Self.FK__DriverCar__IDDri__3A81B327">
+    <AssociationSet Name="FK__DriverCar__IDDri__38996AB5" Association="Self.FK__DriverCar__IDDri__38996AB5">
       <End Role="Driver" EntitySet="Driver" />
       <End Role="DriverCar" EntitySet="DriverCar" />
     </AssociationSet>
-    <AssociationSet Name="FK__Path__IDDriver__3F466844" Association="Self.FK__Path__IDDriver__3F466844">
+    <AssociationSet Name="FK__Path__IDDriver__3D5E1FD2" Association="Self.FK__Path__IDDriver__3D5E1FD2">
       <End Role="Driver" EntitySet="Driver" />
       <End Role="Path" EntitySet="Path" />
     </AssociationSet>

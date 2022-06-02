@@ -1,11 +1,4 @@
 ﻿
-FC:\projects\csharp\TransportAtEnterprise\TransportAtEnterprise\App.xaml;;
-FC:\projects\csharp\TransportAtEnterprise\TransportAtEnterprise\Pages\Car\Car.xaml;;
-FC:\projects\csharp\TransportAtEnterprise\TransportAtEnterprise\Pages\Driver\Driver.xaml;;
-FC:\projects\csharp\TransportAtEnterprise\TransportAtEnterprise\Pages\Path\Path.xaml;;
-FC:\projects\csharp\TransportAtEnterprise\TransportAtEnterprise\Windows\Auth\AuthWindow.xaml;;
-FC:\projects\csharp\TransportAtEnterprise\TransportAtEnterprise\Windows\Car\AddCarWindow.xaml;;
-FC:\projects\csharp\TransportAtEnterprise\TransportAtEnterprise\Windows\Driver\AddDriverWindow.xaml;;
-FC:\projects\csharp\TransportAtEnterprise\TransportAtEnterprise\Windows\MainWindow.xaml;;
-FC:\projects\csharp\TransportAtEnterprise\TransportAtEnterprise\Windows\Path\AddPathWindow.xaml;;
+
+FC:\projects\csharp\TransportAtEnterprise\TransportAtEnterprise\Windows\Path\UpdatePathWindow.xaml;;
 

@@ -39,8 +39,8 @@ DROP TABLE IF EXISTS [Car]
 
 CREATE TABLE [Car] (
 	[ID] INT NOT NULL identity(1,1) PRIMARY KEY,
-	[Title] NVARCHAR(100) NOT NULL UNIQUE,
-	[Model] NVARCHAR(32) NOT NULL UNIQUE,
+	[Title] NVARCHAR(100) NOT NULL,
+	[Model] NVARCHAR(32) NOT NULL,
 	[DateOfRelease] DATE,
 	[Condition] INT NOT NULL DEFAULT 0,
 	[IDStatus] INT NOT NULL DEFAULT 1 REFERENCES [CarStatus] ([ID]),
@@ -75,11 +75,11 @@ CREATE TABLE [Driver] (
 	[Salary] DECIMAL(10,2) NOT NULL,
 	[Phone] NCHAR(20) NOT NULL,
 	[DriverLicenseEnd] DATE NOT NULL,
-	[IDDriverLicense] NVARCHAR(100) NOT NULL,
+	[NumberDriverLicense] NVARCHAR(100) NOT NULL,
 	[IDStatus] INT NOT NULL DEFAULT 1 REFERENCES [DriverStatus] ([ID]),
 	[IsDeleted] BIT NOT NULL DEFAULT 0,
 )
-INSERT INTO [Driver] ([FirstName],[LastName],[Patronymic],[Birthday],[Salary],[Phone],[DriverLicenseEnd],[IDDriverLicense],[IDStatus]) VALUES 
+INSERT INTO [Driver] ([FirstName],[LastName],[Patronymic],[Birthday],[Salary],[Phone],[DriverLicenseEnd],[NumberDriverLicense],[IDStatus]) VALUES 
 ('Ксения','Корнилова',NULL,'2000.12.01',1000,'89295608601','2024.12.12','10010001',1),
 ('Анастасия','Корнеева','Николаевна','2000.12.02',1000,'89295608602','2024.12.12','10010002',1),
 ('Даниил','Овчинников',NULL,'2000.12.03',1000,'89295608603','2024.12.12','10010003',1),

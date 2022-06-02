@@ -97,3 +97,9 @@ C:\projects\csharp\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\Windows
 C:\projects\csharp\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\Windows\Auth\AuthWindow.baml
 C:\projects\c#\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\Windows\Auth\AuthWindow.g.cs
 C:\projects\c#\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\Windows\Auth\AuthWindow.baml
+C:\projects\csharp\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\Windows\Driver\UpdateDriverWindow.g.cs
+C:\projects\csharp\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\Windows\Driver\UpdateDriverWindow.baml
+C:\projects\csharp\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\Windows\Car\UpdateCarWindow.g.cs
+C:\projects\csharp\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\Windows\Path\UpdatePathWindow.g.cs
+C:\projects\csharp\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\Windows\Car\UpdateCarWindow.baml
+C:\projects\csharp\TransportAtEnterprise\TransportAtEnterprise\obj\Debug\Windows\Path\UpdatePathWindow.baml

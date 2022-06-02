@@ -28,6 +28,7 @@ namespace TransportAtEnterprise
             InitializeComponent();
             Classes.Navigate.MainFrame = frame;
             navigation("driver");
+            MessageBox.Show(Classes.Api.ReadDriver().ToList().LastOrDefault().DriverLicenseEnd.ToString());
         }
         private void navigation(string path)
         {
@@ -114,6 +115,11 @@ namespace TransportAtEnterprise
                 AddPathWindow addPathWindow = new AddPathWindow();
                 addPathWindow.ShowDialog();
             }
+        }
+
+        private void search_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Classes.AppData.searchText = search.Text;
         }
     }
 }

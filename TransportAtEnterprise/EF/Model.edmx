@@ -36,7 +36,7 @@
           <Property Name="Salary" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="Phone" Type="nchar" MaxLength="20" Nullable="false" />
           <Property Name="DriverLicenseEnd" Type="date" Nullable="false" />
-          <Property Name="IDDriverLicense" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="NumberDriverLicense" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="IDStatus" Type="int" Nullable="false" />
           <Property Name="IsDeleted" Type="bit" Nullable="false" />
         </EntityType>
@@ -74,7 +74,7 @@
           <Property Name="Email" Type="nvarchar" MaxLength="320" Nullable="false" />
           <Property Name="Token" Type="nvarchar" MaxLength="32" Nullable="false" />
         </EntityType>
-        <Association Name="FK__Car__IDStatus__31EC6D26">
+        <Association Name="FK__Car__IDStatus__300424B4">
           <End Role="CarStatus" Type="Self.CarStatus" Multiplicity="1" />
           <End Role="Car" Type="Self.Car" Multiplicity="*" />
           <ReferentialConstraint>
@@ -86,7 +86,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Driver__IDStatus__36B12243">
+        <Association Name="FK__Driver__IDStatus__34C8D9D1">
           <End Role="DriverStatus" Type="Self.DriverStatus" Multiplicity="1" />
           <End Role="Driver" Type="Self.Driver" Multiplicity="*" />
           <ReferentialConstraint>
@@ -98,7 +98,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DriverCar__IDCar__3B75D760">
+        <Association Name="FK__DriverCar__IDCar__398D8EEE">
           <End Role="Car" Type="Self.Car" Multiplicity="1" />
           <End Role="DriverCar" Type="Self.DriverCar" Multiplicity="*" />
           <ReferentialConstraint>
@@ -110,7 +110,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DriverCar__IDDri__3A81B327">
+        <Association Name="FK__DriverCar__IDDri__38996AB5">
           <End Role="Driver" Type="Self.Driver" Multiplicity="1" />
           <End Role="DriverCar" Type="Self.DriverCar" Multiplicity="*" />
           <ReferentialConstraint>
@@ -122,7 +122,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Path__IDDriver__3F466844">
+        <Association Name="FK__Path__IDDriver__3D5E1FD2">
           <End Role="Driver" Type="Self.Driver" Multiplicity="1" />
           <End Role="Path" Type="Self.Path" Multiplicity="*" />
           <ReferentialConstraint>
@@ -142,23 +142,23 @@
           <EntitySet Name="DriverStatus" EntityType="Self.DriverStatus" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Path" EntityType="Self.Path" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Car__IDStatus__31EC6D26" Association="Self.FK__Car__IDStatus__31EC6D26">
+          <AssociationSet Name="FK__Car__IDStatus__300424B4" Association="Self.FK__Car__IDStatus__300424B4">
             <End Role="CarStatus" EntitySet="CarStatus" />
             <End Role="Car" EntitySet="Car" />
           </AssociationSet>
-          <AssociationSet Name="FK__Driver__IDStatus__36B12243" Association="Self.FK__Driver__IDStatus__36B12243">
+          <AssociationSet Name="FK__Driver__IDStatus__34C8D9D1" Association="Self.FK__Driver__IDStatus__34C8D9D1">
             <End Role="DriverStatus" EntitySet="DriverStatus" />
             <End Role="Driver" EntitySet="Driver" />
           </AssociationSet>
-          <AssociationSet Name="FK__DriverCar__IDCar__3B75D760" Association="Self.FK__DriverCar__IDCar__3B75D760">
+          <AssociationSet Name="FK__DriverCar__IDCar__398D8EEE" Association="Self.FK__DriverCar__IDCar__398D8EEE">
             <End Role="Car" EntitySet="Car" />
             <End Role="DriverCar" EntitySet="DriverCar" />
           </AssociationSet>
-          <AssociationSet Name="FK__DriverCar__IDDri__3A81B327" Association="Self.FK__DriverCar__IDDri__3A81B327">
+          <AssociationSet Name="FK__DriverCar__IDDri__38996AB5" Association="Self.FK__DriverCar__IDDri__38996AB5">
             <End Role="Driver" EntitySet="Driver" />
             <End Role="DriverCar" EntitySet="DriverCar" />
           </AssociationSet>
-          <AssociationSet Name="FK__Path__IDDriver__3F466844" Association="Self.FK__Path__IDDriver__3F466844">
+          <AssociationSet Name="FK__Path__IDDriver__3D5E1FD2" Association="Self.FK__Path__IDDriver__3D5E1FD2">
             <End Role="Driver" EntitySet="Driver" />
             <End Role="Path" EntitySet="Path" />
           </AssociationSet>
@@ -175,23 +175,23 @@
           <EntitySet Name="DriverStatus" EntityType="TransportAtEnterpriseDBModel.DriverStatus" />
           <EntitySet Name="Path" EntityType="TransportAtEnterpriseDBModel.Path" />
           <EntitySet Name="User" EntityType="TransportAtEnterpriseDBModel.User" />
-          <AssociationSet Name="FK__Car__IDStatus__31EC6D26" Association="TransportAtEnterpriseDBModel.FK__Car__IDStatus__31EC6D26">
+          <AssociationSet Name="FK__Car__IDStatus__300424B4" Association="TransportAtEnterpriseDBModel.FK__Car__IDStatus__300424B4">
             <End Role="CarStatus" EntitySet="CarStatus" />
             <End Role="Car" EntitySet="Car" />
           </AssociationSet>
-          <AssociationSet Name="FK__DriverCar__IDCar__3B75D760" Association="TransportAtEnterpriseDBModel.FK__DriverCar__IDCar__3B75D760">
+          <AssociationSet Name="FK__DriverCar__IDCar__398D8EEE" Association="TransportAtEnterpriseDBModel.FK__DriverCar__IDCar__398D8EEE">
             <End Role="Car" EntitySet="Car" />
             <End Role="DriverCar" EntitySet="DriverCar" />
           </AssociationSet>
-          <AssociationSet Name="FK__Driver__IDStatus__36B12243" Association="TransportAtEnterpriseDBModel.FK__Driver__IDStatus__36B12243">
+          <AssociationSet Name="FK__Driver__IDStatus__34C8D9D1" Association="TransportAtEnterpriseDBModel.FK__Driver__IDStatus__34C8D9D1">
             <End Role="DriverStatus" EntitySet="DriverStatus" />
             <End Role="Driver" EntitySet="Driver" />
           </AssociationSet>
-          <AssociationSet Name="FK__DriverCar__IDDri__3A81B327" Association="TransportAtEnterpriseDBModel.FK__DriverCar__IDDri__3A81B327">
+          <AssociationSet Name="FK__DriverCar__IDDri__38996AB5" Association="TransportAtEnterpriseDBModel.FK__DriverCar__IDDri__38996AB5">
             <End Role="Driver" EntitySet="Driver" />
             <End Role="DriverCar" EntitySet="DriverCar" />
           </AssociationSet>
-          <AssociationSet Name="FK__Path__IDDriver__3F466844" Association="TransportAtEnterpriseDBModel.FK__Path__IDDriver__3F466844">
+          <AssociationSet Name="FK__Path__IDDriver__3D5E1FD2" Association="TransportAtEnterpriseDBModel.FK__Path__IDDriver__3D5E1FD2">
             <End Role="Driver" EntitySet="Driver" />
             <End Role="Path" EntitySet="Path" />
           </AssociationSet>
@@ -207,8 +207,8 @@
           <Property Name="Condition" Type="Int32" Nullable="false" />
           <Property Name="IDStatus" Type="Int32" Nullable="false" />
           <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="CarStatus" Relationship="TransportAtEnterpriseDBModel.FK__Car__IDStatus__31EC6D26" FromRole="Car" ToRole="CarStatus" />
-          <NavigationProperty Name="DriverCar" Relationship="TransportAtEnterpriseDBModel.FK__DriverCar__IDCar__3B75D760" FromRole="Car" ToRole="DriverCar" />
+          <NavigationProperty Name="CarStatus" Relationship="TransportAtEnterpriseDBModel.FK__Car__IDStatus__300424B4" FromRole="Car" ToRole="CarStatus" />
+          <NavigationProperty Name="DriverCar" Relationship="TransportAtEnterpriseDBModel.FK__DriverCar__IDCar__398D8EEE" FromRole="Car" ToRole="DriverCar" />
         </EntityType>
         <EntityType Name="CarStatus">
           <Key>
@@ -216,7 +216,7 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Title" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Car" Relationship="TransportAtEnterpriseDBModel.FK__Car__IDStatus__31EC6D26" FromRole="CarStatus" ToRole="Car" />
+          <NavigationProperty Name="Car" Relationship="TransportAtEnterpriseDBModel.FK__Car__IDStatus__300424B4" FromRole="CarStatus" ToRole="Car" />
         </EntityType>
         <EntityType Name="Driver">
           <Key>
@@ -230,12 +230,12 @@
           <Property Name="Salary" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
           <Property Name="Phone" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
           <Property Name="DriverLicenseEnd" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="IDDriverLicense" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NumberDriverLicense" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="IDStatus" Type="Int32" Nullable="false" />
           <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="DriverStatus" Relationship="TransportAtEnterpriseDBModel.FK__Driver__IDStatus__36B12243" FromRole="Driver" ToRole="DriverStatus" />
-          <NavigationProperty Name="DriverCar" Relationship="TransportAtEnterpriseDBModel.FK__DriverCar__IDDri__3A81B327" FromRole="Driver" ToRole="DriverCar" />
-          <NavigationProperty Name="Path" Relationship="TransportAtEnterpriseDBModel.FK__Path__IDDriver__3F466844" FromRole="Driver" ToRole="Path" />
+          <NavigationProperty Name="DriverStatus" Relationship="TransportAtEnterpriseDBModel.FK__Driver__IDStatus__34C8D9D1" FromRole="Driver" ToRole="DriverStatus" />
+          <NavigationProperty Name="DriverCar" Relationship="TransportAtEnterpriseDBModel.FK__DriverCar__IDDri__38996AB5" FromRole="Driver" ToRole="DriverCar" />
+          <NavigationProperty Name="Path" Relationship="TransportAtEnterpriseDBModel.FK__Path__IDDriver__3D5E1FD2" FromRole="Driver" ToRole="Path" />
         </EntityType>
         <EntityType Name="DriverCar">
           <Key>
@@ -245,8 +245,8 @@
           <Property Name="IDDriver" Type="Int32" Nullable="false" />
           <Property Name="IDCar" Type="Int32" Nullable="false" />
           <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Car" Relationship="TransportAtEnterpriseDBModel.FK__DriverCar__IDCar__3B75D760" FromRole="DriverCar" ToRole="Car" />
-          <NavigationProperty Name="Driver" Relationship="TransportAtEnterpriseDBModel.FK__DriverCar__IDDri__3A81B327" FromRole="DriverCar" ToRole="Driver" />
+          <NavigationProperty Name="Car" Relationship="TransportAtEnterpriseDBModel.FK__DriverCar__IDCar__398D8EEE" FromRole="DriverCar" ToRole="Car" />
+          <NavigationProperty Name="Driver" Relationship="TransportAtEnterpriseDBModel.FK__DriverCar__IDDri__38996AB5" FromRole="DriverCar" ToRole="Driver" />
         </EntityType>
         <EntityType Name="DriverStatus">
           <Key>
@@ -254,7 +254,7 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Title" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Driver" Relationship="TransportAtEnterpriseDBModel.FK__Driver__IDStatus__36B12243" FromRole="DriverStatus" ToRole="Driver" />
+          <NavigationProperty Name="Driver" Relationship="TransportAtEnterpriseDBModel.FK__Driver__IDStatus__34C8D9D1" FromRole="DriverStatus" ToRole="Driver" />
         </EntityType>
         <EntityType Name="Path">
           <Key>
@@ -265,7 +265,7 @@
           <Property Name="Address" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
           <Property Name="DateTo" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Driver" Relationship="TransportAtEnterpriseDBModel.FK__Path__IDDriver__3F466844" FromRole="Path" ToRole="Driver" />
+          <NavigationProperty Name="Driver" Relationship="TransportAtEnterpriseDBModel.FK__Path__IDDriver__3D5E1FD2" FromRole="Path" ToRole="Driver" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -275,7 +275,7 @@
           <Property Name="Email" Type="String" Nullable="false" MaxLength="320" FixedLength="false" Unicode="true" />
           <Property Name="Token" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
         </EntityType>
-        <Association Name="FK__Car__IDStatus__31EC6D26">
+        <Association Name="FK__Car__IDStatus__300424B4">
           <End Type="TransportAtEnterpriseDBModel.CarStatus" Role="CarStatus" Multiplicity="1" />
           <End Type="TransportAtEnterpriseDBModel.Car" Role="Car" Multiplicity="*" />
           <ReferentialConstraint>
@@ -287,7 +287,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DriverCar__IDCar__3B75D760">
+        <Association Name="FK__DriverCar__IDCar__398D8EEE">
           <End Type="TransportAtEnterpriseDBModel.Car" Role="Car" Multiplicity="1" />
           <End Type="TransportAtEnterpriseDBModel.DriverCar" Role="DriverCar" Multiplicity="*" />
           <ReferentialConstraint>
@@ -299,7 +299,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Driver__IDStatus__36B12243">
+        <Association Name="FK__Driver__IDStatus__34C8D9D1">
           <End Type="TransportAtEnterpriseDBModel.DriverStatus" Role="DriverStatus" Multiplicity="1" />
           <End Type="TransportAtEnterpriseDBModel.Driver" Role="Driver" Multiplicity="*" />
           <ReferentialConstraint>
@@ -311,7 +311,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DriverCar__IDDri__3A81B327">
+        <Association Name="FK__DriverCar__IDDri__38996AB5">
           <End Type="TransportAtEnterpriseDBModel.Driver" Role="Driver" Multiplicity="1" />
           <End Type="TransportAtEnterpriseDBModel.DriverCar" Role="DriverCar" Multiplicity="*" />
           <ReferentialConstraint>
@@ -323,7 +323,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Path__IDDriver__3F466844">
+        <Association Name="FK__Path__IDDriver__3D5E1FD2">
           <End Type="TransportAtEnterpriseDBModel.Driver" Role="Driver" Multiplicity="1" />
           <End Type="TransportAtEnterpriseDBModel.Path" Role="Path" Multiplicity="*" />
           <ReferentialConstraint>
@@ -367,7 +367,7 @@
               <MappingFragment StoreEntitySet="Driver">
                 <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
                 <ScalarProperty Name="IDStatus" ColumnName="IDStatus" />
-                <ScalarProperty Name="IDDriverLicense" ColumnName="IDDriverLicense" />
+                <ScalarProperty Name="NumberDriverLicense" ColumnName="NumberDriverLicense" />
                 <ScalarProperty Name="DriverLicenseEnd" ColumnName="DriverLicenseEnd" />
                 <ScalarProperty Name="Phone" ColumnName="Phone" />
                 <ScalarProperty Name="Salary" ColumnName="Salary" />

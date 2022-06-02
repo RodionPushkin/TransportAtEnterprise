@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace TransportAtEnterprise.Windows.Car
 {
     /// <summary>
-    /// Логика взаимодействия для AddCarWindow.xaml
+    /// Логика взаимодействия для UpdateCarWindow.xaml
     /// </summary>
-    public partial class AddCarWindow : Window
+    public partial class UpdateCarWindow : Window
     {
-        public AddCarWindow()
+        public UpdateCarWindow()
         {
             InitializeComponent();
             cbStatus.ItemsSource = Classes.Api.ReadCarStatus();
@@ -56,7 +56,12 @@ namespace TransportAtEnterprise.Windows.Car
                 MessageBox.Show("Название не может быть пустым", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-            if (Classes.Api.CreateCar(tbTitle.Text,tbModel.Text,Convert.ToDateTime(dpDate.SelectedDate),cbScore.SelectedIndex, cbStatus.SelectedIndex))
+            else if (dpDate.SelectedDate == null)
+            {
+                MessageBox.Show("Дата выпуска не может быть пустой", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            if (false)
             {
                 this.Close();
             }

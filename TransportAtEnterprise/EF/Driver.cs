@@ -29,7 +29,7 @@ namespace TransportAtEnterprise.EF
         public decimal Salary { get; set; }
         public string Phone { get; set; }
         public System.DateTime DriverLicenseEnd { get; set; }
-        public string IDDriverLicense { get; set; }
+        public string NumberDriverLicense { get; set; }
         public int IDStatus { get; set; }
         public bool IsDeleted { get; set; }
     

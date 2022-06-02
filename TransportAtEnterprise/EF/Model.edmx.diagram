@@ -12,11 +12,11 @@
         <EntityTypeShape EntityType="TransportAtEnterpriseDBModel.DriverStatus" Width="1.5" PointX="0.75" PointY="2.875" />
         <EntityTypeShape EntityType="TransportAtEnterpriseDBModel.Path" Width="1.5" PointX="5.25" PointY="5.5" />
         <EntityTypeShape EntityType="TransportAtEnterpriseDBModel.User" Width="1.5" PointX="7.75" PointY="0.75" />
-        <AssociationConnector Association="TransportAtEnterpriseDBModel.FK__Car__IDStatus__31EC6D26" />
-        <AssociationConnector Association="TransportAtEnterpriseDBModel.FK__DriverCar__IDCar__3B75D760" />
-        <AssociationConnector Association="TransportAtEnterpriseDBModel.FK__Driver__IDStatus__36B12243" />
-        <AssociationConnector Association="TransportAtEnterpriseDBModel.FK__DriverCar__IDDri__3A81B327" />
-        <AssociationConnector Association="TransportAtEnterpriseDBModel.FK__Path__IDDriver__3F466844" />
+        <AssociationConnector Association="TransportAtEnterpriseDBModel.FK__Car__IDStatus__300424B4" />
+        <AssociationConnector Association="TransportAtEnterpriseDBModel.FK__DriverCar__IDCar__398D8EEE" />
+        <AssociationConnector Association="TransportAtEnterpriseDBModel.FK__Driver__IDStatus__34C8D9D1" />
+        <AssociationConnector Association="TransportAtEnterpriseDBModel.FK__DriverCar__IDDri__38996AB5" />
+        <AssociationConnector Association="TransportAtEnterpriseDBModel.FK__Path__IDDriver__3D5E1FD2" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -113,11 +113,20 @@
     <Compile Include="Windows\Car\AddCarWindow.xaml.cs">
       <DependentUpon>AddCarWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\Car\UpdateCarWindow.xaml.cs">
+      <DependentUpon>UpdateCarWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Driver\AddDriverWindow.xaml.cs">
       <DependentUpon>AddDriverWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\Driver\UpdateDriverWindow.xaml.cs">
+      <DependentUpon>UpdateDriverWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Path\AddPathWindow.xaml.cs">
       <DependentUpon>AddPathWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Path\UpdatePathWindow.xaml.cs">
+      <DependentUpon>UpdatePathWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="Pages\Car\Car.xaml">
       <SubType>Designer</SubType>
@@ -139,7 +148,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\Car\UpdateCarWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\Driver\AddDriverWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Driver\UpdateDriverWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -165,6 +182,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Windows\Path\AddPathWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Path\UpdatePathWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

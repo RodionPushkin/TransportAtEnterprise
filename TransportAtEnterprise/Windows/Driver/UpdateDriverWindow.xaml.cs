@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -16,11 +15,11 @@ using System.Windows.Shapes;
 namespace TransportAtEnterprise.Windows.Driver
 {
     /// <summary>
-    /// Логика взаимодействия для AddDriverWindow.xaml
+    /// Логика взаимодействия для UpdateDriverWindow.xaml
     /// </summary>
-    public partial class AddDriverWindow : Window
+    public partial class UpdateDriverWindow : Window
     {
-        public AddDriverWindow()
+        public UpdateDriverWindow()
         {
             InitializeComponent();
             cbStatus.ItemsSource = Classes.Api.ReadDriverStatus();
@@ -69,7 +68,7 @@ namespace TransportAtEnterprise.Windows.Driver
                 MessageBox.Show("Дата окончания водительских прав не может быть пустой", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-            if (Classes.Api.CreateDriver(tbFirstName.Text,tbLastName.Text,tbParonymic.Text,Convert.ToInt32(tbSalary.Text),tbPhone.Text,Convert.ToDateTime(dpDate.SelectedDate), Convert.ToDateTime(dpDateDriver.SelectedDate), Convert.ToInt32(tbIDDriver.Text), Convert.ToInt32(cbStatus.SelectedIndex)))
+            if (false)
             {
                 this.Close();
             }

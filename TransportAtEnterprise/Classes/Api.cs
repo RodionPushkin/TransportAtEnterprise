@@ -9,7 +9,7 @@ namespace TransportAtEnterprise.Classes
 {
     class Api
     {
-        public static bool CreateDriver(List<EF.Driver> Driver)
+        public static bool CreateDriver(string firstName,string LastName,string Patronymic,int salary,string phone,DateTime Birthday,DateTime dateOfEndDriverLicence,int idriverLicence,int idStatus)
         {
             if (true)
             {
@@ -35,9 +35,18 @@ namespace TransportAtEnterprise.Classes
                 return false;
             }
         }
-        public static bool DeleteDriver(List<EF.Driver> Driver)
+        public static bool DeleteDriver(EF.Driver Driver)
         {
-            return false;
+            try
+            {
+                Driver.IsDeleted = true;
+                Classes.AppData.Context.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
         public static bool CreatePath(List<EF.Path> Path)
         {
@@ -65,11 +74,20 @@ namespace TransportAtEnterprise.Classes
                 return false;
             }
         }
-        public static bool DeletePath(List<EF.Path> Path)
+        public static bool DeletePath(EF.Path Path)
         {
-            return false;
+            try
+            {
+                Path.IsDeleted = true;
+                Classes.AppData.Context.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
-        public static bool CreateCar(List<EF.Car> Car)
+        public static bool CreateCar(string name, string model, DateTime Birthday, int idScore, int idStatus)
         {
             if (true)
             {
@@ -95,9 +113,18 @@ namespace TransportAtEnterprise.Classes
                 return false;
             }
         }
-        public static bool DeleteCar(List<EF.Car> Car)
+        public static bool DeleteCar(EF.Car Car)
         {
-            return false;
+            try
+            {
+                Car.IsDeleted = true;
+                Classes.AppData.Context.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
         public static bool Auth(string login, string password)
         {
@@ -123,7 +150,7 @@ namespace TransportAtEnterprise.Classes
         }
         public static List<EF.Driver> SearchDriver(string text)
         {
-            return Classes.AppData.Context.Driver.Where(i => i.FirstName.Contains(text) || i.LastName.Contains(text) || i.Patronymic.Contains(text) || i.IDDriverLicense.Contains(text)).OrderBy(i => i.ID).ToList();
+            return Classes.AppData.Context.Driver.Where(i => i.FirstName.Contains(text) || i.LastName.Contains(text) || i.Patronymic.Contains(text) || i.NumberDriverLicense.Contains(text)).OrderBy(i => i.ID).ToList();
         }
         public static List<EF.Path> SearchPath(string text)
         {
