@@ -47,6 +47,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -125,6 +126,12 @@
     <Compile Include="Windows\Path\AddPathWindow.xaml.cs">
       <DependentUpon>AddPathWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\Path\SelectCarWindow.xaml.cs">
+      <DependentUpon>SelectCarWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Path\SelectDriverWindow.xaml.cs">
+      <DependentUpon>SelectDriverWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Path\UpdatePathWindow.xaml.cs">
       <DependentUpon>UpdatePathWindow.xaml</DependentUpon>
     </Compile>
@@ -182,6 +189,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Windows\Path\AddPathWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Path\SelectCarWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Path\SelectDriverWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

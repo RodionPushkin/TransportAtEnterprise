@@ -56,9 +56,10 @@ namespace TransportAtEnterprise.Windows.Car
                 MessageBox.Show("Название не может быть пустым", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-            if (Classes.Api.CreateCar(tbTitle.Text,tbModel.Text,Convert.ToDateTime(dpDate.SelectedDate),cbScore.SelectedIndex, cbStatus.SelectedIndex))
+            if (Classes.Api.CreateCar(tbTitle.Text,tbModel.Text,Convert.ToDateTime(dpDate.SelectedDate),cbScore.SelectedIndex, cbStatus.SelectedIndex + 1))
             {
                 this.Close();
+                MessageBox.Show("Запись добавлена", "Информация", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {

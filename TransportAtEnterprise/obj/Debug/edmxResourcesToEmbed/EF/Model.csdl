@@ -60,10 +60,10 @@
     <Property Name="LastName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Patronymic" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Birthday" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="Salary" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="Salary" Type="Int32" Nullable="false" />
     <Property Name="Phone" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
-    <Property Name="DriverLicenseEnd" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="NumberDriverLicense" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DriverLicenseFinish" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DriverLicense" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="IDStatus" Type="Int32" Nullable="false" />
     <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
     <NavigationProperty Name="DriverStatus" Relationship="TransportAtEnterpriseDBModel.FK__Driver__IDStatus__34C8D9D1" FromRole="Driver" ToRole="DriverStatus" />

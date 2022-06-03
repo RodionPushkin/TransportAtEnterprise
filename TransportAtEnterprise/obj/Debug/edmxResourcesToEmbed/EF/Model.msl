@@ -27,8 +27,8 @@
         <MappingFragment StoreEntitySet="Driver">
           <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
           <ScalarProperty Name="IDStatus" ColumnName="IDStatus" />
-          <ScalarProperty Name="NumberDriverLicense" ColumnName="NumberDriverLicense" />
-          <ScalarProperty Name="DriverLicenseEnd" ColumnName="DriverLicenseEnd" />
+          <ScalarProperty Name="DriverLicense" ColumnName="DriverLicense" />
+          <ScalarProperty Name="DriverLicenseFinish" ColumnName="DriverLicenseFinish" />
           <ScalarProperty Name="Phone" ColumnName="Phone" />
           <ScalarProperty Name="Salary" ColumnName="Salary" />
           <ScalarProperty Name="Birthday" ColumnName="Birthday" />

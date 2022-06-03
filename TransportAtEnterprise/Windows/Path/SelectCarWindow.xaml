@@ -1,0 +1,32 @@
+﻿<Window x:Class="TransportAtEnterprise.Windows.Path.SelectCarWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TransportAtEnterprise.Windows.Path"
+        mc:Ignorable="d"
+        Title="SelectCarWindow" Height="450" Width="800">
+    <Grid Background="#FFF1F5FF">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="72px"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="search" Cursor="Hand" Margin="0 0 12px 0" Padding="56px 16px 16px 16px" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Width="272px" Height="56px" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Style="{DynamicResource TextBoxStyle1}" MaxLength="150" TextChanged="search_TextChanged">
+            <TextBox.Background>
+                <ImageBrush ImageSource="/TransportAtEnterprise;component/Resources/searchbg.png"/>
+            </TextBox.Background>
+        </TextBox>
+        <ListView MouseDoubleClick="lvCar_MouseDoubleClick" Grid.Row="1" x:Name="lvCar" Background="{x:Null}" BorderBrush="{x:Null}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding ID}"  Header="ID"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Title}" Header="Имя"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Model}" Header="Фамилия"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding DateOfRelease, StringFormat='dd.MM.yyyy'}" Header="Отчество"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Condition}" Header="Дата рождения"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding CarStatus.Title}" Header="Зарплата"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

@@ -7,21 +7,20 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Driver">
-
     <Grid>
-        <ListView x:Name="lvDriver" Background="{x:Null}" BorderBrush="{x:Null}">
+        <ListView MouseDoubleClick="lvDriver_MouseDoubleClick" KeyUp="lvDriver_KeyUp" x:Name="lvDriver" Background="{x:Null}" BorderBrush="{x:Null}">
             <ListView.View>
                 <GridView>
                     <GridViewColumn DisplayMemberBinding="{Binding ID}"  Header="ID"/>
                     <GridViewColumn DisplayMemberBinding="{Binding FirstName}" Header="Имя"/>
                     <GridViewColumn DisplayMemberBinding="{Binding LastName}" Header="Фамилия"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Patronymic}" Header="Отчество"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Birthday}" Header="Дата рождения"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Salary}" Header="Зарплата"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Phone}" Header="Телефон"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding DriverLicenceEnd}" Header="Дата окончания водительских прав"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding NumberDriverLicence}" Header="Номер водительских прав"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding IDStatus}" Header="Статус"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Birthday, StringFormat='dd.MM.yyyy'}" Header="Дата рождения"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding salaryFormated}" Header="Зарплата"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding phoneNumber}" Header="Телефон"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding DriverLicenseFinish, StringFormat='dd.MM.yyyy'}" Header="Дата окончания водительских прав"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding DriverLicense}" Header="Номер водительских прав"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding DriverStatus.Title}" Header="Статус"/>
                 </GridView>
             </ListView.View>
         </ListView>

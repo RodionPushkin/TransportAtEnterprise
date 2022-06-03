@@ -19,12 +19,12 @@ namespace TransportAtEnterprise.Windows.Car
     /// </summary>
     public partial class UpdateCarWindow : Window
     {
-        public UpdateCarWindow()
+        EF.Car Car = null;
+        public UpdateCarWindow(EF.Car car)
         {
             InitializeComponent();
             cbStatus.ItemsSource = Classes.Api.ReadCarStatus();
             cbStatus.DisplayMemberPath = "Title";
-            cbStatus.SelectedIndex = 0;
             cbScore.ItemsSource = new List<int>(){
                 1,
                 2,
@@ -38,6 +38,11 @@ namespace TransportAtEnterprise.Windows.Car
                 10
             };
             cbScore.SelectedIndex = 0;
+            Car = car;
+            cbStatus.SelectedIndex = car.IDStatus - 1;
+            tbTitle.Text = car.Title;
+            tbModel.Text = car.Model;
+            dpDate.SelectedDate = Convert.ToDateTime(car.DateOfRelease);
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -61,9 +66,10 @@ namespace TransportAtEnterprise.Windows.Car
                 MessageBox.Show("Дата выпуска не может быть пустой", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-            if (false)
+            if (Classes.Api.UpdateCar(Car,tbTitle.Text, tbModel.Text, Convert.ToDateTime(dpDate.SelectedDate), cbScore.SelectedIndex, cbStatus.SelectedIndex + 1))
             {
                 this.Close();
+                MessageBox.Show("Запись изменена", "Информация", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {

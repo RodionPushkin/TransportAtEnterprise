@@ -9,7 +9,17 @@
       Title="Path">
 
     <Grid>
-        <TextBlock>Driver</TextBlock>
-        
+        <ListView MouseDoubleClick="lvPath_MouseDoubleClick_1" KeyUp="lvPath_KeyUp_1" x:Name="lvPath" Background="{x:Null}" BorderBrush="{x:Null}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding ID}"  Header="ID"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Driver.FIO}" Header="ФИО"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Driver.Car.Title}" Header="ФИО"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Address}" Header="Адрес"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding DateTo}" Header="Дата доставки"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
     </Grid>
 </Page>

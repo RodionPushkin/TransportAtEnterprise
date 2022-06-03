@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace TransportAtEnterprise.EF
 {
-    internal class DriverClass
+    public partial class Driver
     {
+        public string phoneNumber { get => Classes.AppData.GetPhone(Phone); }
+        public string FIO { get => FirstName + " " + LastName + " " +Patronymic; }
+        public string salaryFormated { get => Classes.AppData.GetMoney(Salary.ToString()); }
     }
 }

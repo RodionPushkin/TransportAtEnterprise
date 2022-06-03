@@ -26,10 +26,10 @@ namespace TransportAtEnterprise.EF
         public string LastName { get; set; }
         public string Patronymic { get; set; }
         public System.DateTime Birthday { get; set; }
-        public decimal Salary { get; set; }
+        public int Salary { get; set; }
         public string Phone { get; set; }
-        public System.DateTime DriverLicenseEnd { get; set; }
-        public string NumberDriverLicense { get; set; }
+        public System.DateTime DriverLicenseFinish { get; set; }
+        public string DriverLicense { get; set; }
         public int IDStatus { get; set; }
         public bool IsDeleted { get; set; }
     

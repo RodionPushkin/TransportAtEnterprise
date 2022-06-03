@@ -69,9 +69,10 @@ namespace TransportAtEnterprise.Windows.Driver
                 MessageBox.Show("Дата окончания водительских прав не может быть пустой", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-            if (Classes.Api.CreateDriver(tbFirstName.Text,tbLastName.Text,tbParonymic.Text,Convert.ToInt32(tbSalary.Text),tbPhone.Text,Convert.ToDateTime(dpDate.SelectedDate), Convert.ToDateTime(dpDateDriver.SelectedDate), Convert.ToInt32(tbIDDriver.Text), Convert.ToInt32(cbStatus.SelectedIndex)))
+            if (Classes.Api.CreateDriver(tbFirstName.Text, tbLastName.Text, tbParonymic.Text, Convert.ToInt32(Classes.AppData.GetNumbers(tbSalary.Text)), tbPhone.Text, Convert.ToDateTime(dpDate.SelectedDate), Convert.ToDateTime(dpDateDriver.SelectedDate), tbIDDriver.Text, Convert.ToInt32(cbStatus.SelectedIndex) + 1))
             {
                 this.Close();
+                MessageBox.Show("Запись добавлена", "Информация", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {

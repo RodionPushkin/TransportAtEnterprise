@@ -19,7 +19,7 @@ namespace TransportAtEnterprise.Windows.Path
     /// </summary>
     public partial class UpdatePathWindow : Window
     {
-        public UpdatePathWindow()
+        public UpdatePathWindow(EF.Path path)
         {
             InitializeComponent();
         }

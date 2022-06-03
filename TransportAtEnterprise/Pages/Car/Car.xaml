@@ -9,6 +9,17 @@
       Title="Car">
 
     <Grid>
-        <TextBlock>Car</TextBlock>
+        <ListView MouseDoubleClick="lvCar_MouseDoubleClick" KeyUp="lvCar_KeyUp" x:Name="lvCar" Background="{x:Null}" BorderBrush="{x:Null}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding ID}"  Header="ID"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Title}" Header="Имя"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Model}" Header="Фамилия"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding DateOfRelease, StringFormat='dd.MM.yyyy'}" Header="Отчество"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Condition}" Header="Дата рождения"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding CarStatus.Title}" Header="Зарплата"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Page>

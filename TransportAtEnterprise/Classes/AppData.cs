@@ -10,7 +10,9 @@ namespace TransportAtEnterprise.Classes
     {
         public static EF.Entities Context { get; } = new EF.Entities();
 
-        public static string searchText { get; set; }  = "";
+        public static string searchText { get; set; } = "";
+        public static EF.Driver selectedDriver { get; set; } = null;
+        public static EF.Car selectedCar { get; set; } = null;
         public static string GetLetters(string text)
         {
             return new String(text.ToCharArray().Where(n => !char.IsDigit(n) && char.IsLetter(n)).ToArray());
@@ -21,7 +23,7 @@ namespace TransportAtEnterprise.Classes
         }
         public static string GetMoney(string text)
         {
-            return Convert.ToInt32(new String(text.ToCharArray().Where(n => char.IsDigit(n) && !char.IsLetter(n)).ToArray())).ToString("N0");
+            return Convert.ToInt32(GetNumbers(text)).ToString("N0");
         }
         public static string GetPhone(string text)
         {

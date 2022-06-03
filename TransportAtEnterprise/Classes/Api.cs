@@ -9,13 +9,25 @@ namespace TransportAtEnterprise.Classes
 {
     class Api
     {
-        public static bool CreateDriver(string firstName,string LastName,string Patronymic,int salary,string phone,DateTime Birthday,DateTime dateOfEndDriverLicence,int idriverLicence,int idStatus)
+        public static bool CreateDriver(string firstName, string lastName, string patronymic, int salary, string phone, DateTime birthday, DateTime dateOfEndDriverLicence, string idDriverLicence, int idStatus)
         {
-            if (true)
+            try
             {
+                EF.Driver Driver = new EF.Driver();
+                Driver.FirstName = firstName;
+                Driver.LastName = lastName;
+                Driver.Phone = Classes.AppData.GetPhone(phone);
+                Driver.Salary = salary;
+                Driver.Birthday = birthday;
+                Driver.IDStatus = Classes.AppData.Context.DriverStatus.Where(i => i.ID == idStatus).ToList().FirstOrDefault().ID;
+                Driver.Patronymic = patronymic;
+                Driver.DriverLicenseFinish = dateOfEndDriverLicence;
+                Driver.DriverLicense = idDriverLicence;
+                Classes.AppData.Context.Driver.Add(Driver);
+                Classes.AppData.Context.SaveChanges();
                 return true;
             }
-            else
+            catch
             {
                 return false;
             }
@@ -24,13 +36,23 @@ namespace TransportAtEnterprise.Classes
         {
             return Classes.AppData.Context.Driver.Where(i => i.IsDeleted == false).OrderBy(i => i.ID).ToList();
         }
-        public static bool UpdateDriver(List<EF.Driver> Driver)
+        public static bool UpdateDriver(EF.Driver Driver,string firstName, string lastName, string patronymic, int salary, string phone, DateTime birthday, DateTime dateOfEndDriverLicence, string idDriverLicence, int idStatus)
         {
-            if (true)
+            try
             {
+                Driver.FirstName = firstName;
+                Driver.LastName = lastName;
+                Driver.Phone = Classes.AppData.GetPhone(phone);
+                Driver.Salary = salary;
+                Driver.Birthday = birthday;
+                Driver.IDStatus = Classes.AppData.Context.DriverStatus.Where(i => i.ID == idStatus).ToList().FirstOrDefault().ID;
+                Driver.Patronymic = patronymic;
+                Driver.DriverLicenseFinish = dateOfEndDriverLicence;
+                Driver.DriverLicense = idDriverLicence;
+                Classes.AppData.Context.SaveChanges();
                 return true;
             }
-            else
+            catch
             {
                 return false;
             }
@@ -89,11 +111,19 @@ namespace TransportAtEnterprise.Classes
         }
         public static bool CreateCar(string name, string model, DateTime Birthday, int idScore, int idStatus)
         {
-            if (true)
+            try
             {
+                EF.Car Car = new EF.Car();
+                Car.Title = name;
+                Car.Model = model;
+                Car.IDStatus = Classes.AppData.Context.CarStatus.Where(i => i.ID == idStatus).ToList().FirstOrDefault().ID;
+                Car.Condition = idScore;
+                Car.DateOfRelease = Birthday;
+                Classes.AppData.Context.Car.Add(Car);
+                Classes.AppData.Context.SaveChanges();
                 return true;
             }
-            else
+            catch
             {
                 return false;
             }
@@ -102,13 +132,19 @@ namespace TransportAtEnterprise.Classes
         {
             return Classes.AppData.Context.Car.Where(i => i.IsDeleted == false).OrderBy(i => i.ID).ToList();
         }
-        public static bool UpdateCar(List<EF.Car> Car)
+        public static bool UpdateCar(EF.Car Car, string name, string model, DateTime Birthday, int idScore, int idStatus)
         {
-            if (true)
+            try
             {
+                Car.Title = name;
+                Car.Model = model;
+                Car.IDStatus = Classes.AppData.Context.CarStatus.Where(i => i.ID == idStatus).ToList().FirstOrDefault().ID;
+                Car.Condition = idScore;
+                Car.DateOfRelease = Birthday;
+                Classes.AppData.Context.SaveChanges();
                 return true;
             }
-            else
+            catch
             {
                 return false;
             }
@@ -146,15 +182,15 @@ namespace TransportAtEnterprise.Classes
         }
         public static List<EF.Car> SearchCar(string text)
         {
-            return Classes.AppData.Context.Car.Where(i => i.Title.Contains(text) || i.Model.Contains(text)).OrderBy(i => i.ID).ToList();
+            return Classes.AppData.Context.Car.Where(i => i.Title.Contains(text) || i.Model.Contains(text)).Where(i => i.IsDeleted == false).OrderBy(i => i.ID).ToList();
         }
         public static List<EF.Driver> SearchDriver(string text)
         {
-            return Classes.AppData.Context.Driver.Where(i => i.FirstName.Contains(text) || i.LastName.Contains(text) || i.Patronymic.Contains(text) || i.NumberDriverLicense.Contains(text)).OrderBy(i => i.ID).ToList();
+            return Classes.AppData.Context.Driver.Where(i => i.FirstName.Contains(text) || i.LastName.Contains(text) || i.Patronymic.Contains(text) || i.DriverLicense.Contains(text)).Where(i => i.IsDeleted == false).OrderBy(i => i.ID).ToList();
         }
         public static List<EF.Path> SearchPath(string text)
         {
-            return Classes.AppData.Context.Path.Where(i => i.Address.Contains(text)).OrderBy(i => i.ID).ToList();
+            return Classes.AppData.Context.Path.Where(i => i.Address.Contains(text)).Where(i => i.IsDeleted == false).OrderBy(i => i.ID).ToList();
         }
         public static List<EF.CarStatus> ReadCarStatus()
         {

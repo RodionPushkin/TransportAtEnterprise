@@ -19,12 +19,23 @@ namespace TransportAtEnterprise.Windows.Driver
     /// </summary>
     public partial class UpdateDriverWindow : Window
     {
-        public UpdateDriverWindow()
+        EF.Driver Driver = null;
+        public UpdateDriverWindow(EF.Driver driver)
         {
             InitializeComponent();
+            Driver = driver;
             cbStatus.ItemsSource = Classes.Api.ReadDriverStatus();
             cbStatus.DisplayMemberPath = "Title";
-            cbStatus.SelectedIndex = 0;
+            cbStatus.SelectedIndex = driver.IDStatus - 1;
+            tbFirstName.Text = driver.FirstName;
+            tbIDDriver.Text = driver.DriverLicense;
+            tbLastName.Text = driver.LastName;
+            tbParonymic.Text = driver.Patronymic;
+            tbPhone.Text = Classes.AppData.GetPhone(driver.Phone);
+            tbSalary.Text = Classes.AppData.GetMoney(driver.Salary.ToString());
+            tbIDDriver.Text = driver.DriverLicense;
+            dpDate.SelectedDate = driver.Birthday;
+            dpDateDriver.SelectedDate = driver.DriverLicenseFinish;
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -68,9 +79,10 @@ namespace TransportAtEnterprise.Windows.Driver
                 MessageBox.Show("Дата окончания водительских прав не может быть пустой", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-            if (false)
+            if (Classes.Api.UpdateDriver(Driver,tbFirstName.Text,tbLastName.Text,tbParonymic.Text,Convert.ToInt32(Classes.AppData.GetNumbers(tbSalary.Text)),tbPhone.Text,Convert.ToDateTime(dpDate.SelectedDate), Convert.ToDateTime(dpDateDriver.SelectedDate),tbIDDriver.Text,Convert.ToInt32(cbStatus.SelectedIndex) + 1))
             {
                 this.Close();
+                MessageBox.Show("Запись изменена", "Информация", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
